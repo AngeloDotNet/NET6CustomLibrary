@@ -145,6 +145,9 @@ csharp_style_unused_value_expression_statement_preference = discard_variable:sug
 # 'using' directive preferences
 csharp_using_directive_placement = outside_namespace:suggestion
 
+# Struct preferences
+csharp_style_prefer_readonly_struct = true:suggestion
+
 #### C# Formatting Rules ####
 
 # New line preferences
@@ -211,6 +214,14 @@ dotnet_naming_rule.types_should_be_pascal_case.style = pascal_case
 dotnet_naming_rule.non_field_members_should_be_pascal_case.severity = suggestion
 dotnet_naming_rule.non_field_members_should_be_pascal_case.symbols = non_field_members
 dotnet_naming_rule.non_field_members_should_be_pascal_case.style = pascal_case
+
+dotnet_naming_rule.constant_fields_should_be_upper_case.severity = suggestion
+dotnet_naming_rule.constant_fields_should_be_upper_case.symbols = constant_fields
+dotnet_naming_rule.constant_fields_should_be_upper_case.style = pascal_case
+
+dotnet_naming_symbols.constant_fields.applicable_kinds = field
+dotnet_naming_symbols.constant_fields.applicable_accessibilities = *
+dotnet_naming_symbols.constant_fields.required_modifiers = const
 
 dotnet_naming_rule.private_or_internal_field_should_be_camel_case.severity = suggestion
 dotnet_naming_rule.private_or_internal_field_should_be_camel_case.symbols = private_or_internal_field
