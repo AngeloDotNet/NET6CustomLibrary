@@ -20,11 +20,12 @@ dotnet add package NET6CustomLibrary
 ```
 
 
+<!--
 ## Coming soon stay tuned
 
 The documentation of this library will be updated in the coming days as a result of its implementations.
 
-<!--
+
 ## RabbitMQ
 
 
@@ -40,8 +41,7 @@ Documentation is available by clicking [here](https://github.com/AngeloDotNet/NE
 
 
 ##  Upload files
-
-
+-->
 ## Serilog (save to text file)
 
 Documentation is available by clicking [here](https://github.com/AngeloDotNet/NET6CustomLibrary/blob/main/src/NET6CustomLibrary/Docs/README-Serilog.md).
@@ -50,7 +50,7 @@ Documentation is available by clicking [here](https://github.com/AngeloDotNet/NE
 ## Multi language support
 
 Documentation is available by clicking [here](https://github.com/AngeloDotNet/NET6CustomLibrary/blob/main/src/NET6CustomLibrary/Docs/README-MultiLanguage.md)
--->
+
 
 ## Contributing
 
