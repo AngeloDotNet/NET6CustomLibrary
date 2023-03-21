@@ -6,7 +6,7 @@
 [![GitHub license](https://img.shields.io/github/license/AngeloDotNet/NET6CustomLibrary)](https://github.com/AngeloDotNet/NET6CustomLibrary/blob/main/LICENSE)
 
 
-Library for .net 6 that avoids the duplication of the code that collects the tools that I often use in my private / working projects.
+Collection of tools mostly used in my private/work projects thus avoiding the duplication of repetitive code (only compatible with .NET 6).
 
 If you like this repository, please drop a :star: on Github!
 
@@ -19,6 +19,38 @@ The library is available on [NuGet](https://www.nuget.org/packages/NET6CustomLib
 dotnet add package NET6CustomLibrary
 ```
 
+
+## Coming soon stay tuned
+
+The documentation of this library will be updated in the coming days as a result of its implementations.
+
+<!--
+## RabbitMQ
+
+
+## Date and Time Only
+
+Documentation is available by clicking [here](https://github.com/AngeloDotNet/NET6CustomLibrary/blob/main/src/NET6CustomLibrary/Docs/README-DateTimeOnly.md).
+
+
+##  MailKit
+
+
+##  Entity Framework Core
+
+
+##  Upload files
+
+
+## Serilog (save to text file)
+
+Documentation is available by clicking [here](https://github.com/AngeloDotNet/NET6CustomLibrary/blob/main/src/NET6CustomLibrary/Docs/README-Serilog.md).
+
+
+## Multi language support
+
+Documentation is available by clicking [here](https://github.com/AngeloDotNet/NET6CustomLibrary/blob/main/src/NET6CustomLibrary/Docs/README-MultiLanguage.md)
+-->
 
 ## Contributing
 
