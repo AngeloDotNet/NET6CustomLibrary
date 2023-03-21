@@ -8,10 +8,8 @@
 
 Collection of tools mostly used in my private/work projects thus avoiding the duplication of repetitive code (only compatible with .NET 6).
 
-If you like this repository, please drop a :star: on Github!
 
-
-## Installation
+### Installation
 
 The library is available on [NuGet](https://www.nuget.org/packages/NET6CustomLibrary) or run the following command in the .NET CLI:
 
@@ -20,30 +18,26 @@ dotnet add package NET6CustomLibrary
 ```
 
 
-<!--
-## RabbitMQ
-
-##  MailKit
-
-##  Entity Framework Core
-
-##  Upload files
--->
-## Date and Time Only
+### Date and Time Only
 
 Documentation is available by clicking [here](https://github.com/AngeloDotNet/NET6CustomLibrary/blob/main/src/NET6CustomLibrary/Docs/README-DateTimeOnly.md).
 
 
-## Serilog (save to text file)
+### Serilog (save to text file)
 
 Documentation is available by clicking [here](https://github.com/AngeloDotNet/NET6CustomLibrary/blob/main/src/NET6CustomLibrary/Docs/README-Serilog.md).
 
 
-## Multi language support
+### Multi language support
 
 Documentation is available by clicking [here](https://github.com/AngeloDotNet/NET6CustomLibrary/blob/main/src/NET6CustomLibrary/Docs/README-MultiLanguage.md)
 
 
-## Contributing
+### Contributing
 
 Contributions and/or suggestions are always welcome.
+
+
+### Support me
+
+If you like this repository, please drop a :star: on Github!
