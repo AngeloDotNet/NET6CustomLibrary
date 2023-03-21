@@ -21,27 +21,19 @@ dotnet add package NET6CustomLibrary
 
 
 <!--
-## Coming soon stay tuned
-
-The documentation of this library will be updated in the coming days as a result of its implementations.
-
-
 ## RabbitMQ
 
+##  MailKit
 
+##  Entity Framework Core
+
+##  Upload files
+-->
 ## Date and Time Only
 
 Documentation is available by clicking [here](https://github.com/AngeloDotNet/NET6CustomLibrary/blob/main/src/NET6CustomLibrary/Docs/README-DateTimeOnly.md).
 
 
-##  MailKit
-
-
-##  Entity Framework Core
-
-
-##  Upload files
--->
 ## Serilog (save to text file)
 
 Documentation is available by clicking [here](https://github.com/AngeloDotNet/NET6CustomLibrary/blob/main/src/NET6CustomLibrary/Docs/README-Serilog.md).
