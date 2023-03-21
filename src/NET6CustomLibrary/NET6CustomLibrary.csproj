@@ -4,11 +4,11 @@
 	<TargetFrameworks>net6.0</TargetFrameworks>
 	<Authors>Angelo Pirola</Authors>
 	<Product>.NET6 library custom extension</Product>
-	<Description>dotnet custom extension library</Description>
+	<Description>open source custom dotnet extension library</Description>
 	<PackageLicenseExpression>MIT</PackageLicenseExpression>
 	<PackageProjectUrl>https://github.com/AngeloDotNet/NET6CustomLibrary</PackageProjectUrl>
     <PackageIcon>LibraryTools.png</PackageIcon>
-	<PackageTags>csharp net6 custom extensions library</PackageTags>
+	<PackageTags>csharp net6 open source custom dotnet extension library</PackageTags>
 	<RepositoryType>git</RepositoryType>
 	<RepositoryUrl>https://github.com/AngeloDotNet/NET6CustomLibrary.git</RepositoryUrl>
 	<RepositoryBranch>main</RepositoryBranch>
