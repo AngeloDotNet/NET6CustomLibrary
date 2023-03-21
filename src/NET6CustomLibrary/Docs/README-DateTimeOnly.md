@@ -28,10 +28,7 @@ public void ConfigureServices(IServiceCollection services)
 {
   services.AddSwaggerGen(options =>
     {
-      options.SwaggerDoc("v1", new OpenApiInfo
-      {
-          //OMISSIS
-      });
+      //OMISSIS
 
       options.AddDateTimeSwaggerGenOptions();
 
