@@ -33,6 +33,11 @@ Documentation is available by clicking [here](https://github.com/AngeloDotNet/NE
 Documentation is available by clicking [here](https://github.com/AngeloDotNet/NET6CustomLibrary/blob/main/src/NET6CustomLibrary/Docs/README-MultiLanguage.md)
 
 
+### Json
+
+Documentation is available by clicking [here](https://github.com/AngeloDotNet/NET6CustomLibrary/blob/main/src/NET6CustomLibrary/Docs/README-Json.md)
+
+
 ### Contributing
 
 Contributions and/or suggestions are always welcome.
