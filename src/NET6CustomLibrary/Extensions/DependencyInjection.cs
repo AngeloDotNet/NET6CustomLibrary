@@ -141,10 +141,10 @@ public static class DependencyInjection
     #endregion
 
     #region "DATABASE HEALTH CHECKS"
-    public static IServiceCollection AddMySqlHealthChecks(this IServiceCollection services, string connectionString)
+    public static IServiceCollection AddMySqlHealthChecks(this IServiceCollection services, string connectionString, string nameAsyncCheck)
     {
         services.AddHealthChecks()
-            .AddAsyncCheck("MySQL", async () =>
+            .AddAsyncCheck(nameAsyncCheck, async () =>
             {
                 try
                 {
@@ -162,9 +162,9 @@ public static class DependencyInjection
         return services;
     }
 
-    public static IEndpointRouteBuilder AddDatabaseHealthChecks(this IEndpointRouteBuilder builder)
+    public static IEndpointRouteBuilder AddDatabaseHealthChecks(this IEndpointRouteBuilder builder, string pattern)
     {
-        builder.MapHealthChecks("/health", new HealthCheckOptions
+        builder.MapHealthChecks(pattern, new HealthCheckOptions
         {
             ResponseWriter = async (context, report) =>
             {
