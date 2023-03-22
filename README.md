@@ -5,7 +5,6 @@
 [![NuGet](https://img.shields.io/nuget/dt/NET6CustomLibrary.svg)](https://www.nuget.org/packages/NET6CustomLibrary)
 [![GitHub license](https://img.shields.io/github/license/AngeloDotNet/NET6CustomLibrary)](https://github.com/AngeloDotNet/NET6CustomLibrary/blob/main/LICENSE)
 
-
 Collection of tools mostly used in my private/work projects thus avoiding the duplication of repetitive code (only compatible with .NET 6).
 
 
@@ -18,41 +17,25 @@ dotnet add package NET6CustomLibrary
 ```
 
 
-### Date and Time Only
+## Library documentation
 
-Documentation is available by clicking [here](https://github.com/AngeloDotNet/NET6CustomLibrary/blob/main/src/NET6CustomLibrary/Docs/README-DateTimeOnly.md).
+The extensions methods available regarding:
 
+- Date and Time Only
+- Serilog (save to text file)
+- Multi language support
+- Json
+- DBContext Pool MySQL / MariaDB
+- Health Checks MySQL / MariaDB
 
-### Serilog (save to text file)
-
-Documentation is available by clicking [here](https://github.com/AngeloDotNet/NET6CustomLibrary/blob/main/src/NET6CustomLibrary/Docs/README-Serilog.md).
-
-
-### Multi language support
-
-Documentation is available by clicking [here](https://github.com/AngeloDotNet/NET6CustomLibrary/blob/main/src/NET6CustomLibrary/Docs/README-MultiLanguage.md)
-
-
-### Json
-
-Documentation is available by clicking [here](https://github.com/AngeloDotNet/NET6CustomLibrary/blob/main/src/NET6CustomLibrary/Docs/README-Json.md)
+The documentation is divided for each extension method, and can be consulted by clicking [here](https://github.com/AngeloDotNet/NET6CustomLibrary/blob/main/src/NET6CustomLibrary/Docs/)
 
 
-### DBContext Pool MySQL / MariaDB
-
-Documentation is available by clicking [here](https://github.com/AngeloDotNet/NET6CustomLibrary/blob/main/src/NET6CustomLibrary/Docs/README-DbContextPool-MySQL.md)
-
-
-### Health Checks MySQL / MariaDB
-
-Documentation is available by clicking [here](https://github.com/AngeloDotNet/NET6CustomLibrary/blob/main/src/NET6CustomLibrary/Docs/README-HealthChecks-MySQL.md)
-
-
-### Contributing
+## Contributing
 
 Contributions and/or suggestions are always welcome.
 
 
-### Support me
+## Support me
 
 If you like this repository, please drop a :star: on Github!
