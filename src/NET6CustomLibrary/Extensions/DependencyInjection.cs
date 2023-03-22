@@ -1,6 +1,13 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using System.Net.Mime;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Diagnostics.HealthChecks;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Routing;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Diagnostics.HealthChecks;
 using Microsoft.OpenApi.Any;
 using Microsoft.OpenApi.Models;
+using MySqlConnector;
 using NET6CustomLibrary.DateTime.Converters;
 using NET6CustomLibrary.Serilog.Services;
 using Serilog;
@@ -106,6 +113,77 @@ public static class DependencyInjection
         {
             options.JsonSerializerOptions.DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull;
         });
+        return builder;
+    }
+    #endregion
+
+    #region "EFCORE DBContext"
+    public static IServiceCollection AddDbContextUseMySql<TDbContext>(this IServiceCollection services, string connectionString, int retryOnFailure) where TDbContext : DbContext
+    {
+        services.AddDbContextPool<TDbContext>(optionBuilder =>
+        {
+            if (retryOnFailure > 0)
+            {
+                optionBuilder.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString), options =>
+                {
+                    // Abilito il connection resiliency (Provider di Postgres è soggetto a errori transienti)
+                    // Info su: https://docs.microsoft.com/en-us/ef/core/miscellaneous/connection-resiliency
+                    options.EnableRetryOnFailure(retryOnFailure);
+                });
+            }
+            else
+            {
+                optionBuilder.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString));
+            }
+        });
+        return services;
+    }
+    #endregion
+
+    #region "DATABASE HEALTH CHECKS"
+    public static IServiceCollection AddMySqlHealthChecks(this IServiceCollection services, string connectionString)
+    {
+        services.AddHealthChecks()
+            .AddAsyncCheck("MySQL", async () =>
+            {
+                try
+                {
+                    using var connection = new MySqlConnection(connectionString);
+                    await connection.OpenAsync();
+                }
+                catch (Exception ex)
+                {
+                    return HealthCheckResult.Unhealthy(ex.Message, ex);
+                }
+
+                return HealthCheckResult.Healthy();
+            });
+
+        return services;
+    }
+
+    public static IEndpointRouteBuilder AddDatabaseHealthChecks(this IEndpointRouteBuilder builder)
+    {
+        builder.MapHealthChecks("/health", new HealthCheckOptions
+        {
+            ResponseWriter = async (context, report) =>
+            {
+                var result = JsonSerializer.Serialize(new
+                {
+                    status = report.Status.ToString(),
+                    details = report.Entries.Select(e => new
+                    {
+                        service = e.Key,
+                        status = Enum.GetName(typeof(HealthStatus), e.Value.Status),
+                        description = e.Value.Description
+                    })
+                });
+
+                context.Response.ContentType = MediaTypeNames.Application.Json;
+                await context.Response.WriteAsync(result);
+            }
+        });
+
         return builder;
     }
     #endregion
