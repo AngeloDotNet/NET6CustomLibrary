@@ -1,4 +1,5 @@
-﻿using System.Net.Mime;
+﻿using System.ComponentModel;
+using System.Net.Mime;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Microsoft.AspNetCore.Http;
@@ -9,6 +10,7 @@ using Microsoft.OpenApi.Any;
 using Microsoft.OpenApi.Models;
 using MySqlConnector;
 using NET6CustomLibrary.DateTime.Converters;
+using NET6CustomLibrary.DateTime.TypeConverters;
 using NET6CustomLibrary.Serilog.Services;
 using Serilog;
 using Swashbuckle.AspNetCore.SwaggerGen;
@@ -85,6 +87,14 @@ public static class DependencyInjection
         });
 
         return builder;
+    }
+
+    public static IServiceCollection AddDateTimeOnlyAttributes(this IServiceCollection services)
+    {
+        TypeDescriptor.AddAttributes(typeof(DateOnly), new TypeConverterAttribute(typeof(DateOnlyTypeConverter)));
+        TypeDescriptor.AddAttributes(typeof(TimeOnly), new TypeConverterAttribute(typeof(TimeOnlyTypeConverter)));
+
+        return services;
     }
 
     public static SwaggerGenOptions AddDateTimeSwaggerGenOptions(this SwaggerGenOptions options)
