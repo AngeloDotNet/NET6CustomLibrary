@@ -98,4 +98,15 @@ public static class DependencyInjection
         return options;
     }
     #endregion
+
+    #region "JSON"
+    public static IMvcBuilder AddSimpleJsonOptions(this IMvcBuilder builder)
+    {
+        builder.AddJsonOptions(options =>
+        {
+            options.JsonSerializerOptions.DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull;
+        });
+        return builder;
+    }
+    #endregion
 }
