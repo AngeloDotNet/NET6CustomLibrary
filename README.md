@@ -38,6 +38,16 @@ Documentation is available by clicking [here](https://github.com/AngeloDotNet/NE
 Documentation is available by clicking [here](https://github.com/AngeloDotNet/NET6CustomLibrary/blob/main/src/NET6CustomLibrary/Docs/README-Json.md)
 
 
+### DBContext Pool MySQL / MariaDB
+
+Documentation is available by clicking [here](https://github.com/AngeloDotNet/NET6CustomLibrary/blob/main/src/NET6CustomLibrary/Docs/README-DbContextPool-MySQL.md)
+
+
+### Health Checks MySQL / MariaDB
+
+Documentation is available by clicking [here](https://github.com/AngeloDotNet/NET6CustomLibrary/blob/main/src/NET6CustomLibrary/Docs/README-HealthChecks-MySQL.md)
+
+
 ### Contributing
 
 Contributions and/or suggestions are always welcome.
