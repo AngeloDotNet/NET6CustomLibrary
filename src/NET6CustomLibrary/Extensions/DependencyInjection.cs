@@ -4,13 +4,13 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Routing;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Diagnostics.HealthChecks;
 using Microsoft.OpenApi.Any;
 using Microsoft.OpenApi.Models;
 using MySqlConnector;
 using NET6CustomLibrary.DateTime.Converters;
 using NET6CustomLibrary.DateTime.TypeConverters;
+using NET6CustomLibrary.EFCore.Infrastructure.Repository;
 using NET6CustomLibrary.Serilog.Services;
 using Serilog;
 using Swashbuckle.AspNetCore.SwaggerGen;
@@ -124,6 +124,18 @@ public static class DependencyInjection
             options.JsonSerializerOptions.DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull;
         });
         return builder;
+    }
+    #endregion
+
+    #region "EFCORE DBContext Generics"
+    public static IServiceCollection AddDbContextGenericsMethods<TDbContext>(this IServiceCollection services) where TDbContext : DbContext
+    {
+        services.AddScoped<DbContext, TDbContext>();
+        services.AddScoped(typeof(IUnitOfWork<,>), typeof(UnitOfWork<,>));
+        services.AddScoped(typeof(IDatabaseRepository<,>), typeof(DatabaseRepository<,>));
+        services.AddScoped(typeof(ICommandRepository<,>), typeof(CommandRepository<,>));
+
+        return services;
     }
     #endregion
 

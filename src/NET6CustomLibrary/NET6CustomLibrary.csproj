@@ -1,44 +1,49 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-<PropertyGroup>
-	<TargetFrameworks>net6.0</TargetFrameworks>
-	<Authors>Angelo Pirola</Authors>
-	<Product>.NET6 library custom extension</Product>
-	<Description>open source custom dotnet extension library</Description>
-	<PackageLicenseExpression>MIT</PackageLicenseExpression>
-	<PackageProjectUrl>https://github.com/AngeloDotNet/NET6CustomLibrary</PackageProjectUrl>
-    <PackageIcon>LibraryTools.png</PackageIcon>
-	<PackageTags>csharp net6 open source custom dotnet extension library</PackageTags>
-	<RepositoryType>git</RepositoryType>
-	<RepositoryUrl>https://github.com/AngeloDotNet/NET6CustomLibrary.git</RepositoryUrl>
-	<RepositoryBranch>main</RepositoryBranch>
-	<PackageReadmeFile>README.md</PackageReadmeFile>
-</PropertyGroup>
+    <PropertyGroup>
+        <TargetFrameworks>net6.0</TargetFrameworks>
+        <Authors>Angelo Pirola</Authors>
+        <Product>.NET6 library custom extension</Product>
+        <Description>open source custom dotnet extension library</Description>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <PackageProjectUrl>https://github.com/AngeloDotNet/NET6CustomLibrary</PackageProjectUrl>
+        <PackageIcon>LibraryTools.png</PackageIcon>
+        <PackageTags>csharp net6 open source custom dotnet extension library</PackageTags>
+        <RepositoryType>git</RepositoryType>
+        <RepositoryUrl>https://github.com/AngeloDotNet/NET6CustomLibrary.git</RepositoryUrl>
+        <RepositoryBranch>main</RepositoryBranch>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+    </PropertyGroup>
 
-<ItemGroup>
-  <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="7.0.0" />
-  <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="7.0.0" />
-  <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="7.0.0" />
-  <PackageReference Include="RabbitMQ.Client" Version="6.4.0" />
-  <PackageReference Include="Serilog.AspNetCore" Version="6.1.0" />
-  <PackageReference Include="Serilog.Settings.Configuration" Version="3.4.0" />
-  <PackageReference Include="Serilog.Sinks.Console" Version="4.1.0" />
-  <PackageReference Include="Serilog.Sinks.File" Version="5.0.0" />
-  <PackageReference Include="Microsoft.AspNetCore.Localization" Version="2.2.0" />
-  <PackageReference Include="Nerdbank.GitVersioning" Version="3.5.119">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-  </PackageReference>
-  <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="7.0.0" />
-  <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="6.5.0" />
-</ItemGroup>
+    <ItemGroup>
+        <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.4" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.4">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="7.0.0" />
+        <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="7.0.0" />
+        <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="7.0.0" />
+        <PackageReference Include="RabbitMQ.Client" Version="6.4.0" />
+        <PackageReference Include="Serilog.AspNetCore" Version="6.1.0" />
+        <PackageReference Include="Serilog.Settings.Configuration" Version="3.4.0" />
+        <PackageReference Include="Serilog.Sinks.Console" Version="4.1.0" />
+        <PackageReference Include="Serilog.Sinks.File" Version="5.0.0" />
+        <PackageReference Include="Microsoft.AspNetCore.Localization" Version="2.2.0" />
+        <PackageReference Include="Nerdbank.GitVersioning" Version="3.5.119">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="7.0.0" />
+        <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="6.5.0" />
+    </ItemGroup>
 
-<ItemGroup>
-    <None Include="..\..\LibraryTools.png">
-        <Pack>True</Pack>
-        <PackagePath></PackagePath>
-    </None>
-    <None Include="..\..\README.md" Pack="true" PackagePath="\" />
-</ItemGroup>
+    <ItemGroup>
+        <None Include="..\..\LibraryTools.png">
+            <Pack>True</Pack>
+            <PackagePath></PackagePath>
+        </None>
+        <None Include="..\..\README.md" Pack="true" PackagePath="\" />
+    </ItemGroup>
 
 </Project>
