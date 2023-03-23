@@ -22,12 +22,13 @@ dotnet add package NET6CustomLibrary
 The extensions methods available regarding:
 
 - Date and Time Only
-- Serilog (save to text file)
-- Multi language support
-- Json
 - DBContext generic CRUD methods
 - DBContext Pool MySQL / MariaDB
 - Health Checks MySQL / MariaDB
+- Json
+- MailKit
+- Multi language support
+- Serilog (save to text file)
 
 The documentation is divided for each extension method, and can be consulted by clicking [here](https://github.com/AngeloDotNet/NET6CustomLibrary/blob/main/src/NET6CustomLibrary/Docs/)
 
