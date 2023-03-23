@@ -4,7 +4,7 @@ internal class QueueListener<T> : BackgroundService where T : class
 {
     private readonly MessageManager messageManager;
     private readonly MessageManagerSettings messageManagerSettings;
-    private readonly ILogger logger;
+    private readonly Microsoft.Extensions.Logging.ILogger logger;
     private readonly IServiceProvider serviceProvider;
     private readonly string queueName;
 
@@ -47,10 +47,10 @@ internal class QueueListener<T> : BackgroundService where T : class
 
                 var receiver = scope.ServiceProvider.GetRequiredService<IMessageReceiver<T>>();
                 var response = JsonSerializer.Deserialize<T>(message.Body.Span, messageManagerSettings.JsonSerializerOptions ?? JsonOptions.Default);
+
                 await receiver.ReceiveAsync(response, stoppingToken);
 
                 messageManager.MarkAsComplete(message);
-
                 logger.LogDebug("Message processed");
             }
             catch (Exception ex)
