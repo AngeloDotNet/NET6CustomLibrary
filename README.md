@@ -25,6 +25,7 @@ The extensions methods available regarding:
 - Serilog (save to text file)
 - Multi language support
 - Json
+- DBContext generic CRUD methods
 - DBContext Pool MySQL / MariaDB
 - Health Checks MySQL / MariaDB
 
