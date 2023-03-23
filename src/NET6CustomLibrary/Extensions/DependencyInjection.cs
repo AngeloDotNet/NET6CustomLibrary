@@ -1,21 +1,4 @@
-﻿using System.ComponentModel;
-using System.Net.Mime;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Diagnostics.HealthChecks;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Routing;
-using Microsoft.Extensions.Diagnostics.HealthChecks;
-using Microsoft.OpenApi.Any;
-using Microsoft.OpenApi.Models;
-using MySqlConnector;
-using NET6CustomLibrary.DateTime.Converters;
-using NET6CustomLibrary.DateTime.TypeConverters;
-using NET6CustomLibrary.EFCore.Infrastructure.Repository;
-using NET6CustomLibrary.Serilog.Services;
-using Serilog;
-using Swashbuckle.AspNetCore.SwaggerGen;
-
-namespace NET6CustomLibrary.Extensions;
+﻿namespace NET6CustomLibrary.Extensions;
 
 public static class DependencyInjection
 {
