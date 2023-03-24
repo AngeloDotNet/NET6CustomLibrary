@@ -8,7 +8,7 @@
 Collection of tools mostly used in my private/work projects thus avoiding the duplication of repetitive code (only compatible with .NET 6).
 
 
-### Installation
+## :dvd: Installation
 
 The library is available on [NuGet](https://www.nuget.org/packages/NET6CustomLibrary) or run the following command in the .NET CLI:
 
@@ -17,7 +17,7 @@ dotnet add package NET6CustomLibrary
 ```
 
 
-## Library documentation
+## :memo: Library documentation
 
 The extensions methods available regarding:
 
@@ -30,14 +30,15 @@ The extensions methods available regarding:
 - Multi language support
 - Serilog (save to text file)
 
+
 The documentation is divided for each extension method, and can be consulted by clicking [here](https://github.com/AngeloDotNet/NET6CustomLibrary/blob/main/src/NET6CustomLibrary/Docs/)
 
 
-## Contributing
+## :star: Give a star
+
+If you found this Implementation helpful or used it in your Projects, do give it a :star: on Github. Thanks!
+
+
+## :muscle: Contributing
 
 Contributions and/or suggestions are always welcome.
-
-
-## Support me
-
-If you like this repository, please drop a :star: on Github!
