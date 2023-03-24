@@ -192,4 +192,18 @@ public static class DependencyInjection
         return builder;
     }
     #endregion
+
+    #region "MAILKIT"
+    public static IServiceCollection AddMailKitEmailSenderService(this IServiceCollection services, IConfiguration configuration)
+    {
+        services
+            .AddSingleton<IEmailSender, MailKitEmailSender>()
+            .AddSingleton<IEmailClient, MailKitEmailSender>();
+
+        services
+            .Configure<SmtpOptions>(configuration.GetSection("Smtp"));
+
+        return services;
+    }
+    #endregion
 }
