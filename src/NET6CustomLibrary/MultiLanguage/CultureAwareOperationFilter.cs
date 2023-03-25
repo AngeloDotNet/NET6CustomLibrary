@@ -1,11 +1,4 @@
-﻿using Microsoft.AspNetCore.Builder;
-using Microsoft.Extensions.Options;
-using Microsoft.Net.Http.Headers;
-using Microsoft.OpenApi.Any;
-using Microsoft.OpenApi.Models;
-using Swashbuckle.AspNetCore.SwaggerGen;
-
-namespace NET6CustomLibrary.MultiLanguage;
+﻿namespace NET6CustomLibrary.MultiLanguage;
 
 public class CultureAwareOperationFilter : IOperationFilter
 {
