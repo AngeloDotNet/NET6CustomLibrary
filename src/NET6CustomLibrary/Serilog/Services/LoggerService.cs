@@ -1,7 +1,4 @@
-﻿using Microsoft.AspNetCore.Http;
-using NET6CustomLibrary.Serilog.Models;
-
-namespace NET6CustomLibrary.Serilog.Services;
+﻿namespace NET6CustomLibrary.Serilog.Services;
 
 public class LoggerService : ILoggerService
 {
