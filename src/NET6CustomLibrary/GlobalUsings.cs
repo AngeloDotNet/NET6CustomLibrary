@@ -39,6 +39,7 @@ global using NET6CustomLibrary.MailKit.Services;
 global using NET6CustomLibrary.RabbitMQ.Abstractions;
 global using NET6CustomLibrary.Serilog.Models;
 global using NET6CustomLibrary.Serilog.Services;
+global using Npgsql;
 global using RabbitMQ.Client;
 global using RabbitMQ.Client.Events;
 global using Serilog;
