@@ -25,6 +25,7 @@ The extensions methods available regarding:
 - DBContext generic CRUD methods
 - DBContext Pool MySQL / MariaDB
 - Health Checks MySQL / MariaDB
+- Health Checks PostgreSQL
 - Json
 - MailKit
 - Multi language support
