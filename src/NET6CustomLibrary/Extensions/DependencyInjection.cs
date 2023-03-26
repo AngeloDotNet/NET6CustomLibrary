@@ -72,6 +72,7 @@ public static class DependencyInjection
         return builder;
     }
 
+    [Obsolete("This method is deprecated. Please indicate the TypeDescriptors as indicated in the README", true)]
     public static IServiceCollection AddDateTimeOnlyAttributes(this IServiceCollection services)
     {
         TypeDescriptor.AddAttributes(typeof(DateOnly), new TypeConverterAttribute(typeof(DateOnlyTypeConverter)));
@@ -154,6 +155,27 @@ public static class DependencyInjection
                 try
                 {
                     using var connection = new MySqlConnection(connectionString);
+                    await connection.OpenAsync();
+                }
+                catch (Exception ex)
+                {
+                    return HealthCheckResult.Unhealthy(ex.Message, ex);
+                }
+
+                return HealthCheckResult.Healthy();
+            });
+
+        return services;
+    }
+
+    public static IServiceCollection AddPostgresHealthChecks(this IServiceCollection services, string connectionString, string nameAsyncCheck)
+    {
+        services.AddHealthChecks()
+            .AddAsyncCheck(nameAsyncCheck, async () =>
+            {
+                try
+                {
+                    using var connection = new NpgsqlConnection(connectionString);
                     await connection.OpenAsync();
                 }
                 catch (Exception ex)
