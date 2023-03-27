@@ -8,6 +8,8 @@ public class TimeOnlyConverter : JsonConverter<TimeOnly>
         return TimeOnly.Parse(value!);
     }
 
+    //public override void Write(Utf8JsonWriter writer, TimeOnly value, JsonSerializerOptions options)
+    //    => writer.WriteStringValue(value.ToString("HH:mm:ss.fff"));
     public override void Write(Utf8JsonWriter writer, TimeOnly value, JsonSerializerOptions options)
-        => writer.WriteStringValue(value.ToString("HH:mm:ss.fff"));
+        => writer.WriteStringValue(value.ToString("HH:mm:ss"));
 }
