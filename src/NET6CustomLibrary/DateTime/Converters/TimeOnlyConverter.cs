@@ -1,15 +1,24 @@
 namespace NET6CustomLibrary.DateTime.Converters;
 
-public class TimeOnlyConverter : JsonConverter<TimeOnly>
-{
-    public override TimeOnly Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
-    {
-        var value = reader.GetString();
-        return TimeOnly.Parse(value!);
-    }
+//public class TimeOnlyConverter : JsonConverter<TimeOnly>
+//{
+//    public override TimeOnly Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
+//    {
+//        var value = reader.GetString();
+//        return TimeOnly.Parse(value!);
+//    }
 
-    //public override void Write(Utf8JsonWriter writer, TimeOnly value, JsonSerializerOptions options)
-    //    => writer.WriteStringValue(value.ToString("HH:mm:ss.fff"));
-    public override void Write(Utf8JsonWriter writer, TimeOnly value, JsonSerializerOptions options)
-        => writer.WriteStringValue(value.ToString("HH:mm:ss"));
+//    //public override void Write(Utf8JsonWriter writer, TimeOnly value, JsonSerializerOptions options)
+//    //    => writer.WriteStringValue(value.ToString("HH:mm:ss.fff"));
+//    public override void Write(Utf8JsonWriter writer, TimeOnly value, JsonSerializerOptions options)
+//        => writer.WriteStringValue(value.ToString("HH:mm:ss"));
+//}
+
+public class TimeOnlyConverter : ValueConverter<TimeOnly, TimeSpan>
+{
+    public TimeOnlyConverter() : base(
+            timeOnly => timeOnly.ToTimeSpan(),
+            timeSpan => TimeOnly.FromTimeSpan(timeSpan))
+    {
+    }
 }
