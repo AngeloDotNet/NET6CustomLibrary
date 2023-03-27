@@ -72,7 +72,7 @@ public static class DependencyInjection
         return builder;
     }
 
-    [Obsolete("This method is deprecated. Please indicate the TypeDescriptors as indicated in the README", true)]
+    //[Obsolete("This method is deprecated. Please indicate the TypeDescriptors as indicated in the README", false)]
     public static IServiceCollection AddDateTimeOnlyAttributes(this IServiceCollection services)
     {
         TypeDescriptor.AddAttributes(typeof(DateOnly), new TypeConverterAttribute(typeof(DateOnlyTypeConverter)));
