@@ -1,6 +1,5 @@
 namespace NET6CustomLibrary.DateTime.TypeConverters;
 
-#if NET6_0
 public class TimeOnlyTypeConverter : TypeConverter
 {
     public override bool CanConvertFrom(ITypeDescriptorContext context, Type sourceType)
@@ -43,4 +42,3 @@ public class TimeOnlyTypeConverter : TypeConverter
         return base.ConvertTo(context, culture, value, destinationType);
     }
 }
-#endif

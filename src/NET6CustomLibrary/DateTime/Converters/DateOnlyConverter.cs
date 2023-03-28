@@ -1,5 +1,3 @@
-using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-
 namespace NET6CustomLibrary.DateTime.Converters;
 
 //public class DateOnlyConverter : JsonConverter<DateOnly>
