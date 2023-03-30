@@ -59,8 +59,8 @@ public static class DependencyInjection
         builder.AddJsonOptions(options =>
         {
             options.JsonSerializerOptions.DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull;
-            //options.JsonSerializerOptions.Converters.Add(new DateOnlyConverter());
-            //options.JsonSerializerOptions.Converters.Add(new TimeOnlyConverter());
+            options.JsonSerializerOptions.Converters.Add(new DateOnlyConverter());
+            options.JsonSerializerOptions.Converters.Add(new TimeOnlyConverter());
             options.JsonSerializerOptions.Converters.Add(new UtcDateTimeConverter());
         });
 
