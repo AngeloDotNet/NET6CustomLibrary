@@ -11,12 +11,3 @@ public class DateOnlyConverter : JsonConverter<DateOnly>
     public override void Write(Utf8JsonWriter writer, DateOnly value, JsonSerializerOptions options)
         => writer.WriteStringValue(value.ToString("yyyy-MM-dd"));
 }
-
-//public class DateOnlyConverter : ValueConverter<DateOnly, System.DateTime>
-//{
-//    public DateOnlyConverter() : base(
-//            dateOnly => dateOnly.ToDateTime(TimeOnly.MinValue),
-//            dateTime => DateOnly.FromDateTime(dateTime))
-//    {
-//    }
-//}
