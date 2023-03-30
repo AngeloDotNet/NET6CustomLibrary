@@ -1,21 +1,6 @@
 # Date and Time only configuration
 
 
-## Add the converters and the comparers in the OnModelCreating method of the DbContext 
-```csharp
-modelBuilder.Entity<MyEntity>(builder =>
-{
-  // Date is a DateOnly property and date on database
-  builder.Property(x => x.Date)
-    .HasConversion<DateOnlyConverter, DateOnlyComparer>();
-
-  // Time is a TimeOnly property and time on database
-  builder.Property(x => x.Time)
-    .HasConversion<TimeOnlyConverter, TimeOnlyComparer>();
-});
-
-```
-
 ## Registering services at Startup
 
 ```csharp
