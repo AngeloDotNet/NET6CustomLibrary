@@ -38,7 +38,7 @@ jobs:
         path: ${{ env.PROJECT_NAME }}
 
     - name: Package
-      run: dotnet pack -c Release -o . '${{ env.PROJECT_NAME }}/${{ env.PROJECT_FILE }}'
+      run: dotnet pack -c Release -o . '${{ env.PROJECT_NAME }}/${{ env.PROJECT_FILE }}' -p:Version=${{ steps.gitversion.outputs.SemVer }}
 
     - name: Publish
       run: | 
