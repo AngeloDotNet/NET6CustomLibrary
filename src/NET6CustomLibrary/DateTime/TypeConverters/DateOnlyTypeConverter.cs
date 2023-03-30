@@ -1,6 +1,6 @@
 namespace NET6CustomLibrary.DateTime.TypeConverters;
 
-public class DateOnlyTypeConverter : TypeConverter
+internal class DateOnlyTypeConverter : TypeConverter
 {
     public override bool CanConvertFrom(ITypeDescriptorContext context, Type sourceType)
     {

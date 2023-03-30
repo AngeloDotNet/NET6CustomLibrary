@@ -2,7 +2,6 @@
 
 public static class DependencyInjection
 {
-    #region "SERILOG"
     public static IServiceCollection AddSerilogServices(this IServiceCollection services)
     {
         services.AddTransient<ILoggerService, LoggerService>();
@@ -29,9 +28,7 @@ public static class DependencyInjection
 
         return builder;
     }
-    #endregion
 
-    #region "MULTI LANGUAGE"
     public static IServiceCollection AddSupportedCultures(this IServiceCollection services, string[] cultures)
     {
         var supportedCultures = cultures;
@@ -56,23 +53,21 @@ public static class DependencyInjection
 
         return app;
     }
-    #endregion
 
-    #region "DATE and TIME ONLY"
     public static IMvcBuilder AddDateTimeJsonOptions(this IMvcBuilder builder)
     {
         builder.AddJsonOptions(options =>
         {
             options.JsonSerializerOptions.DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull;
-            options.JsonSerializerOptions.Converters.Add(new DateOnlyConverter());
-            options.JsonSerializerOptions.Converters.Add(new TimeOnlyConverter());
+            //options.JsonSerializerOptions.Converters.Add(new DateOnlyConverter());
+            //options.JsonSerializerOptions.Converters.Add(new TimeOnlyConverter());
             options.JsonSerializerOptions.Converters.Add(new UtcDateTimeConverter());
         });
 
         return builder;
     }
 
-    [Obsolete("This method is deprecated. Please indicate the TypeDescriptors as indicated in the README", true)]
+    //[Obsolete("This method is deprecated. Please indicate the TypeDescriptors as indicated in the README", false)]
     public static IServiceCollection AddDateTimeOnlyAttributes(this IServiceCollection services)
     {
         TypeDescriptor.AddAttributes(typeof(DateOnly), new TypeConverterAttribute(typeof(DateOnlyTypeConverter)));
@@ -98,9 +93,7 @@ public static class DependencyInjection
 
         return options;
     }
-    #endregion
 
-    #region "JSON"
     public static IMvcBuilder AddSimpleJsonOptions(this IMvcBuilder builder)
     {
         builder.AddJsonOptions(options =>
@@ -109,9 +102,7 @@ public static class DependencyInjection
         });
         return builder;
     }
-    #endregion
 
-    #region "EFCORE DBContext Generics"
     public static IServiceCollection AddDbContextGenericsMethods<TDbContext>(this IServiceCollection services) where TDbContext : DbContext
     {
         services.AddScoped<DbContext, TDbContext>();
@@ -121,9 +112,7 @@ public static class DependencyInjection
 
         return services;
     }
-    #endregion
 
-    #region "EFCORE DBContext"
     public static IServiceCollection AddDbContextUseMySql<TDbContext>(this IServiceCollection services, string connectionString, int retryOnFailure) where TDbContext : DbContext
     {
         services.AddDbContextPool<TDbContext>(optionBuilder =>
@@ -144,9 +133,7 @@ public static class DependencyInjection
         });
         return services;
     }
-    #endregion
 
-    #region "DATABASE HEALTH CHECKS"
     public static IServiceCollection AddMySqlHealthChecks(this IServiceCollection services, string connectionString, string nameAsyncCheck)
     {
         services.AddHealthChecks()
@@ -213,9 +200,7 @@ public static class DependencyInjection
 
         return builder;
     }
-    #endregion
 
-    #region "MAILKIT"
     public static IServiceCollection AddMailKitEmailSenderService(this IServiceCollection services, IConfiguration configuration)
     {
         services
@@ -227,5 +212,4 @@ public static class DependencyInjection
 
         return services;
     }
-    #endregion
 }
