@@ -16,8 +16,7 @@ public class MailKitEmailSender : IEmailClient
         return SendEmailAsync(email, string.Empty, subject, htmlMessage);
     }
 
-    public async Task<bool> SendEmailAsync(string recipientEmail, string replyToEmail, string subject,
-        string htmlMessage, CancellationToken token = default)
+    public async Task<bool> SendEmailAsync(string recipientEmail, string replyToEmail, string subject, string htmlMessage, CancellationToken token = default)
     {
         try
         {
