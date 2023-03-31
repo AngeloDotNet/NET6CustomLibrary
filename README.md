@@ -32,6 +32,7 @@ The extensions methods available regarding:
 - MailKit
 - Multi language support
 - Serilog (save to text file)
+- Swagger UI minimal configuration
 
 
 The documentation is divided for each extension method, and can be consulted by clicking [here](https://github.com/AngeloDotNet/NET6CustomLibrary/blob/main/src/NET6CustomLibrary/Docs/)
