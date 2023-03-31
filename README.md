@@ -7,7 +7,7 @@
 [![NuGet](https://img.shields.io/nuget/dt/NET6CustomLibrary.svg)](https://www.nuget.org/packages/NET6CustomLibrary)
 [![GitHub license](https://img.shields.io/github/license/AngeloDotNet/NET6CustomLibrary)](https://github.com/AngeloDotNet/NET6CustomLibrary/blob/main/LICENSE)
 
-Collection of tools mostly used in my private/work projects thus avoiding the duplication of repetitive code (only compatible with .NET 6).
+Collection of tools mostly used in my private/work projects thus avoiding the duplication of repetitive code.
 
 
 ## :dvd: Installation
