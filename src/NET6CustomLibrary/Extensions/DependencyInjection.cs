@@ -75,6 +75,7 @@ public static class DependencyInjection
         return services;
     }
 
+    [Obsolete("This method is deprecated. Do not use it as it will be removed in the next release", false)]
     public static SwaggerGenOptions AddDateTimeSwaggerGenOptions(this SwaggerGenOptions options)
     {
         options.MapType<DateOnly>(() => new OpenApiSchema
