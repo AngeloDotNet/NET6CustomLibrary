@@ -1,6 +1,6 @@
 # NET6 Custom Library
 
-[![Build](https://github.com/AngeloDotNet/NET6CustomLibrary/actions/workflows/build.yml/badge.svg)](https://github.com/AngeloDotNet/NET6CustomLibrary/actions/workflows/build.yml)
+[![Build and Test](https://github.com/AngeloDotNet/NET6CustomLibrary/actions/workflows/build.yml/badge.svg)](https://github.com/AngeloDotNet/NET6CustomLibrary/actions/workflows/build.yml)
 [![Build and Pack on Github](https://github.com/AngeloDotNet/NET6CustomLibrary/actions/workflows/dotnet-github.yml/badge.svg)](https://github.com/AngeloDotNet/NET6CustomLibrary/actions/workflows/dotnet-github.yml)
 [![Build and Pack on Nuget](https://github.com/AngeloDotNet/NET6CustomLibrary/actions/workflows/dotnet-nuget.yml/badge.svg)](https://github.com/AngeloDotNet/NET6CustomLibrary/actions/workflows/dotnet-nuget.yml)
 [![NuGet](https://img.shields.io/nuget/v/NET6CustomLibrary.svg)](https://www.nuget.org/packages/NET6CustomLibrary)
