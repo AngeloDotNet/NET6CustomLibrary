@@ -1,8 +1,8 @@
 # NET6 Custom Library
 
-[![NuGet](https://img.shields.io/nuget/v/NET6CustomLibrary.svg)](https://www.nuget.org/packages/NET6CustomLibrary)
-[![NuGet](https://img.shields.io/nuget/dt/NET6CustomLibrary.svg)](https://www.nuget.org/packages/NET6CustomLibrary)
-[![GitHub license](https://img.shields.io/github/license/AngeloDotNet/NET6CustomLibrary)](https://github.com/AngeloDotNet/NET6CustomLibrary/blob/main/LICENSE)
+[![NuGet](https://img.shields.io/nuget/v/NET6CustomLibrary.svg?style=for-the-badge)](https://www.nuget.org/packages/NET6CustomLibrary)
+[![NuGet](https://img.shields.io/nuget/dt/NET6CustomLibrary.svg?style=for-the-badge)](https://www.nuget.org/packages/NET6CustomLibrary)
+[![GitHub license](https://img.shields.io/github/license/AngeloDotNet/NET6CustomLibrary?style=for-the-badge)](https://github.com/AngeloDotNet/NET6CustomLibrary/blob/main/LICENSE)
 
 Collection of tools mostly used in my private/work projects thus avoiding the duplication of repetitive code.
 
