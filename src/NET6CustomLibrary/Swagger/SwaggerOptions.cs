@@ -13,23 +13,4 @@ public static class SwaggerOptions
 
         return app;
     }
-
-    public static OpenApiInfo AddOptionalOpenApiInfo(this OpenApiInfo openApiInfo, string name, string email, string siteUrl,
-        string nameLicense = "MIT License", string urlLicense = "https://opensource.org/licenses/MIT")
-    {
-        openApiInfo.Contact = new OpenApiContact
-        {
-            Name = $"{name}",
-            Email = $"{email}",
-            Url = new Uri($"{siteUrl}"),
-        };
-
-        openApiInfo.License = new OpenApiLicense
-        {
-            Name = $"{nameLicense}",
-            Url = new Uri($"{urlLicense}"),
-        };
-
-        return openApiInfo;
-    }
 }
