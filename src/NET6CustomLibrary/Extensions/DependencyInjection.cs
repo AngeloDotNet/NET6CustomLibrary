@@ -176,6 +176,27 @@ public static class DependencyInjection
         return services;
     }
 
+    public static IServiceCollection AddSqlServerHealthChecks(this IServiceCollection services, string connectionString, string nameAsyncCheck)
+    {
+        services.AddHealthChecks()
+            .AddAsyncCheck(nameAsyncCheck, async () =>
+            {
+                try
+                {
+                    using var connection = new SqlConnection(connectionString);
+                    await connection.OpenAsync();
+                }
+                catch (Exception ex)
+                {
+                    return HealthCheckResult.Unhealthy(ex.Message, ex);
+                }
+
+                return HealthCheckResult.Healthy();
+            });
+
+        return services;
+    }
+
     public static IEndpointRouteBuilder AddDatabaseHealthChecks(this IEndpointRouteBuilder builder, string pattern)
     {
         builder.MapHealthChecks(pattern, new HealthCheckOptions

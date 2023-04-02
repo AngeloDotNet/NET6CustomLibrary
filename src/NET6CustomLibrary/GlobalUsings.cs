@@ -16,6 +16,7 @@ global using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 global using Microsoft.AspNetCore.Http;
 global using Microsoft.AspNetCore.Identity.UI.Services;
 global using Microsoft.AspNetCore.Routing;
+global using Microsoft.Data.SqlClient;
 global using Microsoft.EntityFrameworkCore;
 global using Microsoft.Extensions.Configuration;
 global using Microsoft.Extensions.DependencyInjection;
