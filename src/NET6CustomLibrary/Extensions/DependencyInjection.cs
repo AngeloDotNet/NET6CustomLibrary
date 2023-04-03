@@ -2,6 +2,7 @@
 
 public static class DependencyInjection
 {
+    #region "SERILOG"
     public static IServiceCollection AddSerilogServices(this IServiceCollection services)
     {
         services.AddTransient<ILoggerService, LoggerService>();
@@ -28,7 +29,9 @@ public static class DependencyInjection
 
         return builder;
     }
+    #endregion
 
+    #region "SUPPORTED CULTURES"
     public static IServiceCollection AddSupportedCultures(this IServiceCollection services, string[] cultures)
     {
         var supportedCultures = cultures;
@@ -53,7 +56,9 @@ public static class DependencyInjection
 
         return app;
     }
+    #endregion
 
+    #region "DATE and TIME"
     public static IMvcBuilder AddDateTimeJsonOptions(this IMvcBuilder builder)
     {
         builder.AddJsonOptions(options =>
@@ -93,7 +98,9 @@ public static class DependencyInjection
 
         return options;
     }
+    #endregion
 
+    #region "JSON"
     public static IMvcBuilder AddSimpleJsonOptions(this IMvcBuilder builder)
     {
         builder.AddJsonOptions(options =>
@@ -102,7 +109,9 @@ public static class DependencyInjection
         });
         return builder;
     }
+    #endregion
 
+    #region "DB Context"
     public static IServiceCollection AddDbContextGenericsMethods<TDbContext>(this IServiceCollection services) where TDbContext : DbContext
     {
         services.AddScoped<DbContext, TDbContext>();
@@ -133,7 +142,9 @@ public static class DependencyInjection
         });
         return services;
     }
+    #endregion
 
+    #region "HEALTH CHECKS"
     public static IServiceCollection AddMySqlHealthChecks(this IServiceCollection services, string connectionString, string nameAsyncCheck)
     {
         services.AddHealthChecks()
@@ -221,7 +232,9 @@ public static class DependencyInjection
 
         return builder;
     }
+    #endregion
 
+    #region "SEND EMAIL"
     public static IServiceCollection AddMailKitEmailSenderService(this IServiceCollection services, IConfiguration configuration)
     {
         services
@@ -233,4 +246,5 @@ public static class DependencyInjection
 
         return services;
     }
+    #endregion
 }
