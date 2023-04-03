@@ -59,6 +59,15 @@ public static class DependencyInjection
     #endregion
 
     #region "DATE and TIME"
+    public static IMvcBuilder AddSimpleJsonOptions(this IMvcBuilder builder)
+    {
+        builder.AddJsonOptions(options =>
+        {
+            options.JsonSerializerOptions.DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull;
+        });
+        return builder;
+    }
+
     public static IMvcBuilder AddDateTimeJsonOptions(this IMvcBuilder builder)
     {
         builder.AddJsonOptions(options =>
@@ -99,15 +108,6 @@ public static class DependencyInjection
         });
 
         return options;
-    }
-
-    public static IMvcBuilder AddSimpleJsonOptions(this IMvcBuilder builder)
-    {
-        builder.AddJsonOptions(options =>
-        {
-            options.JsonSerializerOptions.DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull;
-        });
-        return builder;
     }
     #endregion
 
