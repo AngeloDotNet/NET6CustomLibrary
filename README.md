@@ -32,7 +32,9 @@ The extensions methods available regarding:
 - Swagger UI minimal configuration
 
 
-The documentation is divided for each extension method, and can be consulted by clicking [here](https://github.com/AngeloDotNet/NET6CustomLibrary/blob/main/src/NET6CustomLibrary/Docs/)
+The documentation is divided for each extension method, and can be consulted by clicking [here](https://github.com/AngeloDotNet/NET6CustomLibrary/blob/main/src/NET6CustomLibrary/Docs/).
+
+In addition to the implementations listed above, the library includes dependencies to the MediatR and AutoMapper packages.
 
 
 ## :star: Give a star
