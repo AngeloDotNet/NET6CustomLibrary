@@ -13,8 +13,7 @@ public IConfiguration Configuration { get; }
 	
 public void ConfigureServices(IServiceCollection services)
 {
-  TypeDescriptor.AddAttributes(typeof(DateOnly), new TypeConverterAttribute(typeof(DateOnlyTypeConverter)));
-  TypeDescriptor.AddAttributes(typeof(TimeOnly), new TypeConverterAttribute(typeof(TimeOnlyTypeConverter)));
+  services.AddDateTimeOnlyAttributes();
 
   services.AddControllers()
     .AddDateTimeJsonOptions();
@@ -23,16 +22,5 @@ public void ConfigureServices(IServiceCollection services)
 
 
 ## Added options in swagger configuration
-```csharp
-public void ConfigureServices(IServiceCollection services)
-{
-  services.AddSwaggerGen(options =>
-    {
-      //OMISSIS
 
-      options.AddDateTimeSwaggerGenOptions();
-
-      //OMISSIS
-    });
-}
-```
+Consult the documentation by clicking [here](https://github.com/AngeloDotNet/NET6CustomLibrary/blob/main/src/NET6CustomLibrary/Docs/README-SwaggerDateTime.md).
