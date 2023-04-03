@@ -4,7 +4,13 @@
 [![NuGet](https://img.shields.io/nuget/dt/NET6CustomLibrary.svg?style=for-the-badge)](https://www.nuget.org/packages/NET6CustomLibrary)
 [![GitHub license](https://img.shields.io/github/license/AngeloDotNet/NET6CustomLibrary?style=for-the-badge)](https://github.com/AngeloDotNet/NET6CustomLibrary/blob/main/LICENSE)
 
+
 Collection of tools mostly used in my private/work projects thus avoiding the duplication of repetitive code.
+
+
+## :star: Give a star
+
+If you found this Implementation helpful or used it in your Projects, do give it a :star: on Github. Thanks!
 
 
 ## :dvd: Installation
@@ -35,11 +41,6 @@ The extensions methods available regarding:
 The documentation is divided for each extension method, and can be consulted by clicking [here](https://github.com/AngeloDotNet/NET6CustomLibrary/blob/main/src/NET6CustomLibrary/Docs/).
 
 In addition to the implementations listed above, the library includes dependencies to the MediatR and AutoMapper packages.
-
-
-## :star: Give a star
-
-If you found this Implementation helpful or used it in your Projects, do give it a :star: on Github. Thanks!
 
 
 ## :muscle: Contributing
