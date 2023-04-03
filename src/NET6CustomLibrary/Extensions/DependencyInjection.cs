@@ -79,7 +79,9 @@ public static class DependencyInjection
 
         return services;
     }
+    #endregion
 
+    #region "SWAGGER"
     [Obsolete("This method is deprecated. Do not use it as it will be removed in the next release", false)]
     public static SwaggerGenOptions AddDateTimeSwaggerGenOptions(this SwaggerGenOptions options)
     {
@@ -98,9 +100,7 @@ public static class DependencyInjection
 
         return options;
     }
-    #endregion
 
-    #region "JSON"
     public static IMvcBuilder AddSimpleJsonOptions(this IMvcBuilder builder)
     {
         builder.AddJsonOptions(options =>
