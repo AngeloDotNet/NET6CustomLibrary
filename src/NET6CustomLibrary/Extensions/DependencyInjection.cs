@@ -130,7 +130,7 @@ public static class DependencyInjection
             {
                 optionBuilder.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString), options =>
                 {
-                    // Abilito il connection resiliency (Provider di Postgres è soggetto a errori transienti)
+                    // Abilito il connection resiliency (Provider di Mysql / MariaDB è soggetto a errori transienti)
                     // Info su: https://docs.microsoft.com/en-us/ef/core/miscellaneous/connection-resiliency
                     options.EnableRetryOnFailure(retryOnFailure);
                 });
@@ -142,6 +142,29 @@ public static class DependencyInjection
         });
         return services;
     }
+
+    public static IServiceCollection AddDbContextUsePostgres<TDbContext>(this IServiceCollection services, string connectionString, int retryOnFailure) where TDbContext : DbContext
+    {
+        services.AddDbContextPool<TDbContext>(optionBuilder =>
+        {
+            if (retryOnFailure > 0)
+            {
+                optionBuilder.UseNpgsql(connectionString, options =>
+                {
+                    // Abilito il connection resiliency (Provider di Postgres è soggetto a errori transienti)
+                    // Info su: https://docs.microsoft.com/en-us/ef/core/miscellaneous/connection-resiliency
+                    options.EnableRetryOnFailure(retryOnFailure);
+                });
+            }
+            else
+            {
+                optionBuilder.UseNpgsql(connectionString);
+            }
+        });
+
+        return services;
+    }
+
     #endregion
 
     #region "HEALTH CHECKS"
