@@ -233,7 +233,7 @@ public static class DependencyInjection
 
     public static IEndpointRouteBuilder AddDatabaseHealthChecks(this IEndpointRouteBuilder builder, string pattern, bool allowAnonymous = false)
     {
-        if (allowAnonymous)
+        if (!allowAnonymous)
         {
             builder.MapHealthChecks(pattern, new HealthCheckOptions
             {
