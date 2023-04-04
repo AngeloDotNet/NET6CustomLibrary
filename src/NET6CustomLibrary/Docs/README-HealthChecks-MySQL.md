@@ -25,7 +25,7 @@ public IConfiguration Configuration { get; }
 public void ConfigureServices(IServiceCollection services)
 {
     var connectionString = Configuration.GetSection("ConnectionStrings").GetValue<string>("Default");
-    services.AddMySqlHealthChecks(connectionString, "MySQL");
+    services.AddMySqlHealthChecks(connectionString, "MySQL", false); //Use the True parameter if access is to be in AllowAnonymous mode
 }
 
 //OMISSIS

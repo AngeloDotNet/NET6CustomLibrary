@@ -25,7 +25,7 @@ public IConfiguration Configuration { get; }
 public void ConfigureServices(IServiceCollection services)
 {
     var connectionString = Configuration.GetSection("ConnectionStrings").GetValue<string>("Default");
-    services.AddPostgresHealthChecks(connectionString, "Postgres");
+    services.AddPostgresHealthChecks(connectionString, "Postgres", false); //Use the True parameter if access is to be in AllowAnonymous mode
 }
 
 //OMISSIS
