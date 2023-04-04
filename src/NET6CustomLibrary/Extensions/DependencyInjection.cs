@@ -231,27 +231,52 @@ public static class DependencyInjection
         return services;
     }
 
-    public static IEndpointRouteBuilder AddDatabaseHealthChecks(this IEndpointRouteBuilder builder, string pattern)
+    public static IEndpointRouteBuilder AddDatabaseHealthChecks(this IEndpointRouteBuilder builder, string pattern, bool allowAnonymous = false)
     {
-        builder.MapHealthChecks(pattern, new HealthCheckOptions
+        if (allowAnonymous)
         {
-            ResponseWriter = async (context, report) =>
+            builder.MapHealthChecks(pattern, new HealthCheckOptions
             {
-                var result = JsonSerializer.Serialize(new
+                ResponseWriter = async (context, report) =>
                 {
-                    status = report.Status.ToString(),
-                    details = report.Entries.Select(e => new
+                    var result = JsonSerializer.Serialize(new
                     {
-                        service = e.Key,
-                        status = Enum.GetName(typeof(HealthStatus), e.Value.Status),
-                        description = e.Value.Description
-                    })
-                });
+                        status = report.Status.ToString(),
+                        details = report.Entries.Select(e => new
+                        {
+                            service = e.Key,
+                            status = Enum.GetName(typeof(HealthStatus), e.Value.Status),
+                            description = e.Value.Description
+                        })
+                    });
 
-                context.Response.ContentType = MediaTypeNames.Application.Json;
-                await context.Response.WriteAsync(result);
-            }
-        });
+                    context.Response.ContentType = MediaTypeNames.Application.Json;
+                    await context.Response.WriteAsync(result);
+                }
+            });
+        }
+        else
+        {
+            builder.MapHealthChecks(pattern, new HealthCheckOptions
+            {
+                ResponseWriter = async (context, report) =>
+                {
+                    var result = JsonSerializer.Serialize(new
+                    {
+                        status = report.Status.ToString(),
+                        details = report.Entries.Select(e => new
+                        {
+                            service = e.Key,
+                            status = Enum.GetName(typeof(HealthStatus), e.Value.Status),
+                            description = e.Value.Description
+                        })
+                    });
+
+                    context.Response.ContentType = MediaTypeNames.Application.Json;
+                    await context.Response.WriteAsync(result);
+                }
+            }).AllowAnonymous();
+        }
 
         return builder;
     }
