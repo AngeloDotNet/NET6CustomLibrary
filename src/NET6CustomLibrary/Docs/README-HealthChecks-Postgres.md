@@ -25,7 +25,7 @@ public IConfiguration Configuration { get; }
 public void ConfigureServices(IServiceCollection services)
 {
     var connectionString = Configuration.GetSection("ConnectionStrings").GetValue<string>("Default");
-    services.AddPostgresHealthChecks(connectionString, "Postgres", false); //Use the True parameter if access is to be in AllowAnonymous mode
+    services.AddPostgresHealthChecks(connectionString, "Postgres");
 }
 
 //OMISSIS
@@ -37,7 +37,7 @@ public void Configure(WebApplication app)
   app.UseEndpoints(endpoints =>
   {
       endpoints.MapControllers();
-      endpoints.AddDatabaseHealthChecks("/status");
+      endpoints.AddDatabaseHealthChecks("/status", false); //Use the True parameter if access is to be in AllowAnonymous mode
   }
 }
 ```
