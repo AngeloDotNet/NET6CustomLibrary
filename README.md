@@ -41,8 +41,8 @@ The extensions methods available regarding:
 - Serilog (save to text file)
 - Swagger UI minimal configuration
 - Swagger UI with date and time only management
-- Swagger UI with JWT Bearer (coming soon)
-- Swagger UI with date, time and JWT Bearer (coming soon)
+- Swagger UI with JWT Bearer
+- Swagger UI with date, time and JWT Bearer
 - Upload Files (coming soon)
 
 
