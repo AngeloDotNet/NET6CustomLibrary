@@ -20,7 +20,7 @@ public static class SwaggerJWTBearer
                 options.AddSecurityDefinition(JwtBearerDefaults.AuthenticationScheme, new OpenApiSecurityScheme
                 {
                     In = ParameterLocation.Header,
-                    Description = "Insert the Bearer Token",
+                    Description = "Enter 'Bearer' [space] and then your token in the text input below.",
                     Name = HeaderNames.Authorization,
                     Type = SecuritySchemeType.ApiKey
                 });
