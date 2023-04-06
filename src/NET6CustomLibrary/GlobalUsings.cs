@@ -11,6 +11,7 @@ global using System.Threading;
 global using System.Threading.Tasks;
 global using MailKit.Net.Smtp;
 global using MailKit.Security;
+global using Microsoft.AspNetCore.Authentication.JwtBearer;
 global using Microsoft.AspNetCore.Builder;
 global using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 global using Microsoft.AspNetCore.Http;
