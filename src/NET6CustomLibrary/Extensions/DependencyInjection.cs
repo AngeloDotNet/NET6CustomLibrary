@@ -90,26 +90,26 @@ public static class DependencyInjection
     }
     #endregion
 
-    #region "SWAGGER"
-    [Obsolete("This method is deprecated and will be removed. See https://bit.ly/40XbcAs link for new documentation.", true)]
-    public static SwaggerGenOptions AddDateTimeSwaggerGenOptions(this SwaggerGenOptions options)
-    {
-        options.MapType<DateOnly>(() => new OpenApiSchema
-        {
-            Type = "string",
-            Format = "date"
-        });
+    //#region "SWAGGER"
+    //[Obsolete("This method is deprecated and will be removed. See https://bit.ly/40XbcAs link for new documentation.", true)]
+    //public static SwaggerGenOptions AddDateTimeSwaggerGenOptions(this SwaggerGenOptions options)
+    //{
+    //    options.MapType<DateOnly>(() => new OpenApiSchema
+    //    {
+    //        Type = "string",
+    //        Format = "date"
+    //    });
 
-        options.MapType<TimeOnly>(() => new OpenApiSchema
-        {
-            Type = "string",
-            Format = "time",
-            Example = new OpenApiString(TimeOnly.FromDateTime(System.DateTime.Now).ToString("HH:mm:ss"))
-        });
+    //    options.MapType<TimeOnly>(() => new OpenApiSchema
+    //    {
+    //        Type = "string",
+    //        Format = "time",
+    //        Example = new OpenApiString(TimeOnly.FromDateTime(System.DateTime.Now).ToString("HH:mm:ss"))
+    //    });
 
-        return options;
-    }
-    #endregion
+    //    return options;
+    //}
+    //#endregion
 
     #region "DB Context"
     public static IServiceCollection AddDbContextGenericsMethods<TDbContext>(this IServiceCollection services) where TDbContext : DbContext
