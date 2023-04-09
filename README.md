@@ -26,24 +26,24 @@ dotnet add package NET6CustomLibrary
 
 The extensions methods available regarding:
 
-- Date and Time Only
-- DBContext generic CRUD methods
-- DBContext Pool MySQL / MariaDB
-- DBContext Pool PostgreSQL
-- DBContext Pool SQL server (coming soon)
-- Health Checks MySQL / MariaDB
-- Health Checks PostgreSQL
-- Health Checks SQL Server (coming soon)
-- Json
-- MailKit
-- Multi language support
-- RabbitMQ (coming soon)
-- Serilog (save to text file)
-- Swagger UI minimal configuration
-- Swagger UI with date and time only management
-- Swagger UI with JWT Bearer
-- Swagger UI with date, time and JWT Bearer
-- Upload Files (coming soon)
+- [x] Date and Time Only<br />
+- [x] DBContext generic CRUD methods<br />
+- [x] DBContext Pool MySQL / MariaDB<br />
+- [x] DBContext Pool PostgreSQL<br />
+- [ ] DBContext Pool SQL server (coming soon)<br />
+- [x] Health Checks MySQL / MariaDB<br />
+- [x] Health Checks PostgreSQL<br />
+- [ ] Health Checks SQL Server (coming soon)<br />
+- [x] Json<br />
+- [x] MailKit<br />
+- [x] Multi language support<br />
+- [ ] RabbitMQ (coming soon)<br />
+- [x] Serilog (save to text file)<br />
+- [x] Swagger UI minimal configuration<br />
+- [x] Swagger UI with date and time only management<br />
+- [x] Swagger UI with JWT Bearer<br />
+- [x] Swagger UI with date, time and JWT Bearer<br />
+- [ ] Upload Files (coming soon)
 
 
 The documentation is divided for each extension method, and can be consulted by clicking [here](https://github.com/AngeloDotNet/NET6CustomLibrary/blob/main/src/NET6CustomLibrary/Docs/).
