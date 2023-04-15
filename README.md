@@ -32,6 +32,7 @@ The extensions methods available regarding:
 - [x] DBContext Pool PostgreSQL<br>
 - [x] DBContext Pool SQLite<br>
 - [ ] DBContext Pool SQL server (coming soon)<br>
+- [ ] Guid generator (coming soon)<br>
 - [x] Health Checks MySQL / MariaDB<br>
 - [x] Health Checks PostgreSQL<br>
 - [ ] Health Checks SQL Server (coming soon)<br>
