@@ -144,6 +144,19 @@ public static class DependencyInjection
         return services;
     }
 
+    public static IServiceCollection AddDbContextUseSQLite<TDbContext>(this IServiceCollection services, string connectionString) where TDbContext : DbContext
+    {
+        services.AddDbContextPool<TDbContext>(optionsBuilder =>
+        {
+            optionsBuilder.UseSqlite(connectionString, options =>
+            {
+                // Non abilito il connection resiliency, non è supportato dal provider di Sqlite in quanto non soggetto a errori transienti)
+            });
+        });
+
+        return services;
+    }
+
     #endregion
 
     #region "HEALTH CHECKS"
