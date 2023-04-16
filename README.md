@@ -32,7 +32,6 @@ The extensions methods available regarding:
 - [x] DBContext Pool PostgreSQL<br>
 - [x] DBContext Pool SQLite<br>
 - [ ] DBContext Pool SQL server (coming soon)<br>
-- [ ] Guid generator (coming soon)<br>
 - [x] Health Checks MySQL / MariaDB<br>
 - [x] Health Checks PostgreSQL<br>
 - [ ] Health Checks SQL Server (coming soon)<br>
@@ -49,7 +48,7 @@ The extensions methods available regarding:
 
 
 The documentation is divided for each extension method, and can be consulted by clicking [here](https://github.com/AngeloDotNet/NET6CustomLibrary/blob/main/src/NET6CustomLibrary/Docs/).
-In addition to the implementations listed above, the library includes dependencies to the MediatR and AutoMapper packages.
+In addition to the implementations listed above, the library includes dependencies to the MediatR, AutoMapper and SequentialGuid packages.
 
 
 ## :muscle: Contributing
