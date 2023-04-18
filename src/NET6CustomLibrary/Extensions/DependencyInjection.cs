@@ -144,6 +144,28 @@ public static class DependencyInjection
         return services;
     }
 
+    public static IServiceCollection AddDbContextUseSQLServer<TDbContext>(this IServiceCollection services, string connectionString, int retryOnFailure) where TDbContext : DbContext
+    {
+        services.AddDbContextPool<TDbContext>(optionBuilder =>
+        {
+            if (retryOnFailure > 0)
+            {
+                optionBuilder.UseSqlServer(connectionString, options =>
+                {
+                    // Abilito il connection resiliency (Provider di SQL Server è soggetto a errori transienti)
+                    // Info su: https://docs.microsoft.com/en-us/ef/core/miscellaneous/connection-resiliency
+                    options.EnableRetryOnFailure(retryOnFailure);
+                });
+            }
+            else
+            {
+                optionBuilder.UseSqlServer(connectionString);
+            }
+        });
+
+        return services;
+    }
+
     public static IServiceCollection AddDbContextUseSQLite<TDbContext>(this IServiceCollection services, string connectionString) where TDbContext : DbContext
     {
         services.AddDbContextPool<TDbContext>(optionsBuilder =>
@@ -156,7 +178,6 @@ public static class DependencyInjection
 
         return services;
     }
-
     #endregion
 
     #region "HEALTH CHECKS"
