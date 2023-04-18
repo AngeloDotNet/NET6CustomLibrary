@@ -101,6 +101,14 @@ public static class DependencyInjection
         return services;
     }
 
+    /// <summary>
+    /// Extension method per aggiungere un DbContext di tipo TDbContext con il provider MySQL / MariaDB
+    /// </summary>
+    /// <typeparam name="TDbContext"></typeparam>
+    /// <param name="services"></param>
+    /// <param name="connectionString"></param>
+    /// <param name="retryOnFailure"></param>
+    /// <returns></returns>
     public static IServiceCollection AddDbContextUseMySql<TDbContext>(this IServiceCollection services, string connectionString, int retryOnFailure) where TDbContext : DbContext
     {
         services.AddDbContextPool<TDbContext>(optionBuilder =>
@@ -122,6 +130,14 @@ public static class DependencyInjection
         return services;
     }
 
+    /// <summary>
+    /// Extension method per aggiungere un DbContext di tipo TDbContext con il provider Postgres
+    /// </summary>
+    /// <typeparam name="TDbContext"></typeparam>
+    /// <param name="services"></param>
+    /// <param name="connectionString"></param>
+    /// <param name="retryOnFailure"></param>
+    /// <returns></returns>
     public static IServiceCollection AddDbContextUsePostgres<TDbContext>(this IServiceCollection services, string connectionString, int retryOnFailure) where TDbContext : DbContext
     {
         services.AddDbContextPool<TDbContext>(optionBuilder =>
@@ -144,6 +160,14 @@ public static class DependencyInjection
         return services;
     }
 
+    /// <summary>
+    /// Extension method per aggiungere un DbContext di tipo TDbContext con il provider SQL Server
+    /// </summary>
+    /// <typeparam name="TDbContext"></typeparam>
+    /// <param name="services"></param>
+    /// <param name="connectionString"></param>
+    /// <param name="retryOnFailure"></param>
+    /// <returns></returns>
     public static IServiceCollection AddDbContextUseSQLServer<TDbContext>(this IServiceCollection services, string connectionString, int retryOnFailure) where TDbContext : DbContext
     {
         services.AddDbContextPool<TDbContext>(optionBuilder =>
@@ -162,10 +186,16 @@ public static class DependencyInjection
                 optionBuilder.UseSqlServer(connectionString);
             }
         });
-
         return services;
     }
 
+    /// <summary>
+    /// Extension method per aggiungere un DbContext di tipo TDbContext con il provider SQLite
+    /// </summary>
+    /// <typeparam name="TDbContext"></typeparam>
+    /// <param name="services"></param>
+    /// <param name="connectionString"></param>
+    /// <returns></returns>
     public static IServiceCollection AddDbContextUseSQLite<TDbContext>(this IServiceCollection services, string connectionString) where TDbContext : DbContext
     {
         services.AddDbContextPool<TDbContext>(optionsBuilder =>
