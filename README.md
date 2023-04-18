@@ -31,19 +31,23 @@ The extensions methods available regarding:
 - [x] DBContext Pool MySQL / MariaDB<br>
 - [x] DBContext Pool PostgreSQL<br>
 - [x] DBContext Pool SQLite<br>
-- [x] DBContext Pool SQL server (coming soon)<br>
+- [x] DBContext Pool SQL server<br>
 - [x] Health Checks MySQL / MariaDB<br>
 - [x] Health Checks PostgreSQL<br>
-- [ ] Health Checks SQL Server (coming soon)<br>
 - [x] Json<br>
 - [x] MailKit<br>
 - [x] Multi language support<br>
-- [ ] RabbitMQ (coming soon)<br>
 - [x] Serilog (save to text file)<br>
 - [x] Swagger UI minimal configuration<br>
 - [x] Swagger UI with date and time only management<br>
 - [x] Swagger UI with JWT Bearer<br>
 - [x] Swagger UI with date, time and JWT Bearer<br>
+
+
+Coming soon:
+
+- [ ] Health Checks SQL Server (coming soon)<br>
+- [ ] RabbitMQ (coming soon)<br>
 - [ ] Upload Files (coming soon)
 
 
