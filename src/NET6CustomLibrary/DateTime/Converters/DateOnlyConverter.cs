@@ -1,6 +1,6 @@
 namespace NET6CustomLibrary.DateTime.Converters;
 
-public class DateOnlyConverter : JsonConverter<DateOnly>
+public class DateOnlyConverter : System.Text.Json.Serialization.JsonConverter<DateOnly>
 {
     public override DateOnly Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
     {

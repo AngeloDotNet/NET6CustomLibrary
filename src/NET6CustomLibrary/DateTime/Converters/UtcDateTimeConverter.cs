@@ -1,6 +1,6 @@
 namespace NET6CustomLibrary.DateTime.Converters;
 
-public class UtcDateTimeConverter : JsonConverter<System.DateTime>
+public class UtcDateTimeConverter : System.Text.Json.Serialization.JsonConverter<System.DateTime>
 {
     private readonly string serializationFormat;
 
