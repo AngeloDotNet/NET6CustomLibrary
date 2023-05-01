@@ -282,7 +282,7 @@ public static class DependencyInjection
             {
                 ResponseWriter = async (context, report) =>
                 {
-                    var result = JsonSerializer.Serialize(new
+                    var result = System.Text.Json.JsonSerializer.Serialize(new
                     {
                         status = report.Status.ToString(),
                         details = report.Entries.Select(e => new
@@ -304,7 +304,7 @@ public static class DependencyInjection
             {
                 ResponseWriter = async (context, report) =>
                 {
-                    var result = JsonSerializer.Serialize(new
+                    var result = System.Text.Json.JsonSerializer.Serialize(new
                     {
                         status = report.Status.ToString(),
                         details = report.Entries.Select(e => new

@@ -46,7 +46,7 @@ internal class QueueListener<T> : BackgroundService where T : class
                 using var scope = serviceProvider.CreateScope();
 
                 var receiver = scope.ServiceProvider.GetRequiredService<IMessageReceiver<T>>();
-                var response = JsonSerializer.Deserialize<T>(message.Body.Span, messageManagerSettings.JsonSerializerOptions ?? JsonOptions.Default);
+                var response = System.Text.Json.JsonSerializer.Deserialize<T>(message.Body.Span, messageManagerSettings.JsonSerializerOptions ?? JsonOptions.Default);
 
                 await receiver.ReceiveAsync(response, stoppingToken);
 
