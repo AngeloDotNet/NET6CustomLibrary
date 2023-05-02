@@ -49,6 +49,7 @@ Coming soon:
 - [ ] Health Checks SQL Server (coming soon)<br>
 - [ ] RabbitMQ (coming soon)<br>
 - [ ] Redis Cache (Documentation coming soon)<br>
+- [ ] MediatR (Documentation coming soon)<br>
 - [ ] Upload Files (coming soon)
 
 
