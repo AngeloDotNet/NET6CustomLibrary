@@ -50,6 +50,7 @@ Coming soon:
 - [ ] RabbitMQ (coming soon)<br>
 - [ ] Redis Cache (Documentation coming soon)<br>
 - [ ] MediatR (Documentation coming soon)<br>
+- [ ] Scrutor (Documentation coming soon)<br>
 - [ ] Upload Files (coming soon)
 
 
