@@ -37,6 +37,7 @@ The extensions methods available regarding:
 - [x] Json<br>
 - [x] MailKit<br>
 - [x] Multi language support<br>
+- [x] Redis Cache<br>
 - [x] Serilog (save to text file)<br>
 - [x] Swagger UI minimal configuration<br>
 - [x] Swagger UI with date and time only management<br>
@@ -48,7 +49,6 @@ Coming soon:
 
 - [ ] Health Checks SQL Server (coming soon)<br>
 - [ ] RabbitMQ (coming soon)<br>
-- [ ] Redis Cache (Documentation coming soon)<br>
 - [ ] MediatR (Documentation coming soon)<br>
 - [ ] Scrutor (Documentation coming soon)<br>
 - [ ] Upload Files (coming soon)
