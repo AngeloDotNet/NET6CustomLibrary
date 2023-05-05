@@ -348,8 +348,9 @@ public static class DependencyInjection
             options.InstanceName = configuration.GetSection("Redis").GetValue<string>("InstanceName");
         });
 
-        services.
-            Configure<RedisOptions>(configuration.GetSection("Redis"));
+        services.AddTransient<ICacheService, CacheService>();
+
+        services.Configure<RedisOptions>(configuration.GetSection("Redis"));
 
         return services;
     }
