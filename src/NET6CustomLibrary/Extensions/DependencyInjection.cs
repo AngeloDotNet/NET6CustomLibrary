@@ -338,4 +338,20 @@ public static class DependencyInjection
         return services;
     }
     #endregion
+
+    #region "REDIS CACHE"
+    public static IServiceCollection AddRedisCacheService(this IServiceCollection services, IConfiguration configuration)
+    {
+        services.AddStackExchangeRedisCache(options =>
+        {
+            options.Configuration = configuration.GetSection("ConnectionStrings").GetValue<string>("Redis");
+            options.InstanceName = configuration.GetSection("Redis").GetValue<string>("InstanceName");
+        });
+
+        services.
+            Configure<RedisOptions>(configuration.GetSection("Redis"));
+
+        return services;
+    }
+    #endregion
 }
