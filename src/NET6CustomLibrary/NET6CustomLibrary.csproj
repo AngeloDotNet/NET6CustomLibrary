@@ -34,7 +34,7 @@
         <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="6.0.0" />
         <PackageReference Include="Microsoft.Extensions.DependencyModel" Version="6.0.0" />
         <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="6.0.0" />
-        <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="6.0.0" />
+        <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="6.0.3" />
         <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="6.0.8" />
         <PackageReference Include="RabbitMQ.Client" Version="6.5.0" />
         <PackageReference Include="Scrutor" Version="4.2.2" />
@@ -55,7 +55,7 @@
         <PackageReference Include="Microsoft.Extensions.Caching.StackExchangeRedis" Version="6.0.16" />
         <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
         <PackageReference Include="MassTransit.AspNetCore" Version="7.3.1" />
-        <PackageReference Include="MassTransit.RabbitMQ" Version="8.0.14" />
+        <PackageReference Include="MassTransit.RabbitMQ" Version="8.0.15" />
     </ItemGroup>
 
     <ItemGroup>
