@@ -55,7 +55,7 @@ Coming soon:
 
 
 The documentation is divided for each extension method, and can be consulted by clicking [here](https://github.com/AngeloDotNet/NET6CustomLibrary/blob/main/src/NET6CustomLibrary/Docs/).
-In addition to the implementations listed above, the library includes dependencies to the FluentValidation, AutoMapper and SequentialGuid packages.
+In addition to the implementations listed above, the library includes dependencies to the MassTransit, FluentValidation, AutoMapper and SequentialGuid packages.
 
 
 ## :muscle: Contributing
