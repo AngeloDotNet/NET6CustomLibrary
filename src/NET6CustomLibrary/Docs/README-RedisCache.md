@@ -4,10 +4,8 @@
 ## Configuration to add to the appsettings.json file
 
 ```json
-"ConnectionStrings": {
-  "Redis": "localhost:6379"
-},
 "Redis": {
+  "Hostname": "localhost:6379",
   "InstanceName": "RedisCache_",
   "AbsoluteExpireTime": 60, // in minutes
   "SlidingExpireTime": 15 // in minutes
