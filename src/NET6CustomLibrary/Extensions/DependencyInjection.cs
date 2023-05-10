@@ -352,7 +352,7 @@ public static class DependencyInjection
 
         services.AddTransient<ICacheService, CacheService>();
 
-        services.Configure<RedisOptions>(redisConfig);
+        services.Configure<RedisOptions>(configuration.GetSection("Redis"));
 
         return services;
     }
