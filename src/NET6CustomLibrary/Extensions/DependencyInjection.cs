@@ -342,15 +342,17 @@ public static class DependencyInjection
     #region "REDIS CACHE"
     public static IServiceCollection AddRedisCacheService(this IServiceCollection services, IConfiguration configuration)
     {
+        var redisConfig = configuration.GetSection("Redis");
+
         services.AddStackExchangeRedisCache(options =>
         {
-            options.Configuration = configuration.GetSection("ConnectionStrings").GetValue<string>("Redis");
-            options.InstanceName = configuration.GetSection("Redis").GetValue<string>("InstanceName");
+            options.Configuration = redisConfig["Hostname"];
+            options.InstanceName = redisConfig["InstanceName"];
         });
 
         services.AddTransient<ICacheService, CacheService>();
 
-        services.Configure<RedisOptions>(configuration.GetSection("Redis"));
+        services.Configure<RedisOptions>(redisConfig);
 
         return services;
     }
