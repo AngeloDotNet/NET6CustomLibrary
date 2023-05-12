@@ -50,17 +50,18 @@ public class ExampleController : ControllerBase
   {
     logger.LogInformation("GetMyListType");
 
-    var cache = cacheService.GetCache<List<MyListType>>("ListType");
+    var lista = new List<MyListType>();
+    var recordKey = $"MyListType_{SequentialGuidGenerator.Instance.NewGuid()}";
 
-    if (cache != null)
+    lista = await cacheService.GetCacheAsync<List<MyListType>>(recordKey);
+
+    if (lista is null)
     {
-        return cache;
+        lista = await utilityService.GetMyListTypeAsync();
+        await cacheService.SetCacheAsync(recordKey, lista);
     }
-    else
-    {
-        var result = await myService.GetMyListTypeAsync();
-        return cacheService.SetCache("ListType", result);
-    }
+
+    return lista;
   }
 }
 ```
