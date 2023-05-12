@@ -20,7 +20,7 @@ public class CacheService : ICacheService
             return default;
         }
 
-        return System.Text.Json.JsonSerializer.Deserialize<T>(jsonData);
+        return JsonSerializer.Deserialize<T>(jsonData);
     }
 
     public async Task<T> SetCacheAsync<T>(string key, T value)
@@ -32,7 +32,7 @@ public class CacheService : ICacheService
             SlidingExpiration = optionsCache.SlidingExpireTime
         };
 
-        var jsonData = System.Text.Json.JsonSerializer.Serialize(value);
+        var jsonData = JsonSerializer.Serialize(value);
 
         await cache.SetStringAsync(key, jsonData, options);
 
