@@ -176,6 +176,8 @@ public static class DependencyInjection
             {
                 optionBuilder.UseSqlServer(connectionString, options =>
                 {
+                    options.MigrationsAssembly(typeof(TDbContext).Assembly.FullName);
+
                     // Abilito il connection resiliency (Provider di SQL Server è soggetto a errori transienti)
                     // Info su: https://docs.microsoft.com/en-us/ef/core/miscellaneous/connection-resiliency
                     options.EnableRetryOnFailure(retryOnFailure);
@@ -183,7 +185,10 @@ public static class DependencyInjection
             }
             else
             {
-                optionBuilder.UseSqlServer(connectionString);
+                optionBuilder.UseSqlServer(connectionString, options =>
+                {
+                    options.MigrationsAssembly(typeof(TDbContext).Assembly.FullName);
+                });
             }
         });
         return services;
