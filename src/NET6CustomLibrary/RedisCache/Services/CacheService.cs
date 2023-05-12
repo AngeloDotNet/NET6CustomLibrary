@@ -11,44 +11,30 @@ public class CacheService : ICacheService
         this.redisOptionsMonitor = redisOptionsMonitor;
     }
 
-    /// <summary>
-    /// Get the values from the cache
-    /// </summary>
-    /// <typeparam name="T"></typeparam>
-    /// <param name="key"></param>
-    /// <returns>Return the values from the cache</returns>
-    public T GetCache<T>(string key)
+    public async Task<T> GetCacheAsync<T>(string key)
     {
-        var value = cache.GetString(key);
+        var jsonData = await cache.GetStringAsync(key);
 
-        if (value != null)
+        if (jsonData is null)
         {
-            return JsonConvert.DeserializeObject<T>(value);
+            return default;
         }
 
-        return default;
+        return System.Text.Json.JsonSerializer.Deserialize<T>(jsonData);
     }
 
-    /// <summary>
-    /// Set the values in the cache
-    /// </summary>
-    /// <typeparam name="T"></typeparam>
-    /// <param name="key"></param>
-    /// <param name="value"></param>
-    /// <returns>Return the values after set the values in the cache</returns>
-    public T SetCache<T>(string key, T value)
+    public async Task<T> SetCacheAsync<T>(string key, T value)
     {
-        var options = redisOptionsMonitor.CurrentValue;
-        var redisOptions = new DistributedCacheEntryOptions
+        var optionsCache = redisOptionsMonitor.CurrentValue;
+        var options = new DistributedCacheEntryOptions
         {
-            //Set the time the cache will expire from the time of entry (representing now)
-            AbsoluteExpirationRelativeToNow = TimeSpan.FromMinutes(options.AbsoluteExpireTime),
-
-            //Time until the cache entry is valid, before which if a hit occurs the time must be extended further.
-            SlidingExpiration = TimeSpan.FromMinutes(options.SlidingExpireTime)
+            AbsoluteExpirationRelativeToNow = optionsCache.AbsoluteExpireTime,
+            SlidingExpiration = optionsCache.SlidingExpireTime
         };
 
-        cache.SetString(key, JsonConvert.SerializeObject(value), redisOptions);
+        var jsonData = System.Text.Json.JsonSerializer.Serialize(value);
+
+        await cache.SetStringAsync(key, jsonData, options);
 
         return value;
     }

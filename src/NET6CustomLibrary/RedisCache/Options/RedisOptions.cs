@@ -2,7 +2,8 @@
 
 public class RedisOptions
 {
+    public string Hostname { get; set; }
     public string InstanceName { get; set; }
-    public int AbsoluteExpireTime { get; set; }
-    public int SlidingExpireTime { get; set; }
+    public TimeSpan AbsoluteExpireTime { get; set; }
+    public TimeSpan SlidingExpireTime { get; set; }
 }

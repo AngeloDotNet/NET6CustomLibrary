@@ -2,6 +2,6 @@
 
 public interface ICacheService
 {
-    T GetCache<T>(string key);
-    T SetCache<T>(string key, T value);
+    Task<T> GetCacheAsync<T>(string key);
+    Task<T> SetCacheAsync<T>(string key, T value);
 }
