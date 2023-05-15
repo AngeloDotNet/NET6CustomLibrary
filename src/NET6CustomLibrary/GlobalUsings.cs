@@ -3,6 +3,7 @@ global using System.Collections.Generic;
 global using System.ComponentModel;
 global using System.Globalization;
 global using System.Linq;
+global using System.Net;
 global using System.Net.Mime;
 global using System.Text;
 global using System.Text.Json;
