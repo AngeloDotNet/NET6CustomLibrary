@@ -1,6 +1,6 @@
 ﻿namespace NET6CustomLibrary.Errors;
 
-public class ErrorResult
+public class ErrorResult : IErrorResult
 {
     public string TitleCode { get; set; }
     public HttpStatusCode StatusCode { get; set; }
@@ -8,7 +8,7 @@ public class ErrorResult
     public string InstancePath { get; set; }
     public List<string> Message { get; set; }
 
-    public static ErrorResult ResultUnprocessableEntity(List<string> listErrors, HttpContext httpContext)
+    public ErrorResult ResultUnprocessableEntity(List<string> listErrors, HttpContext httpContext)
     {
         ErrorResult errorResult = new()
         {
@@ -22,7 +22,7 @@ public class ErrorResult
         return errorResult;
     }
 
-    //public static ErrorResult ResultNotFound(List<string> listErrors, HttpContext httpContext)
+    //public ErrorResult ResultNotFound(List<string> listErrors, HttpContext httpContext)
     //{
     //    ErrorResult errorResult = new()
     //    {
