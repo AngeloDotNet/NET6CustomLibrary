@@ -5,7 +5,7 @@
 [![GitHub license](https://img.shields.io/github/license/AngeloDotNet/NET6CustomLibrary?style=for-the-badge)](https://github.com/AngeloDotNet/NET6CustomLibrary/blob/main/LICENSE)
 
 
-Collection of tools mostly used in my private/work projects thus avoiding the duplication of repetitive code.
+Collection of tools mostly used in my private and/or work projects thus avoiding the duplication of repetitive code.
 
 
 ## :star: Give a star
@@ -34,6 +34,7 @@ The extensions methods available regarding:
 - [x] DBContext Pool SQL server<br>
 - [x] Health Checks MySQL / MariaDB<br>
 - [x] Health Checks PostgreSQL<br>
+- [ ] Health Checks SQL Server (coming soon)<br>
 - [x] Json<br>
 - [x] MailKit<br>
 - [x] Multi language support<br>
@@ -43,19 +44,20 @@ The extensions methods available regarding:
 - [x] Swagger UI with date and time only management<br>
 - [x] Swagger UI with JWT Bearer<br>
 - [x] Swagger UI with date, time and JWT Bearer<br>
-
-
-Coming soon:
-
-- [ ] Health Checks SQL Server (coming soon)<br>
-- [ ] RabbitMQ (coming soon)<br>
 - [ ] MediatR (Documentation coming soon)<br>
-- [ ] Scrutor (Documentation coming soon)<br>
+- [ ] Scrutor (Documentation coming soon)
+
+
+The available method interfaces:
+
+- [ ] Fluent Validation (Documentation coming soon)<br>
+- [ ] Status Code Result (coming soon)<br>
+- [ ] RabbitMQ (coming soon)<br>
 - [ ] Upload Files (coming soon)
 
 
 The documentation is divided for each extension method, and can be consulted by clicking [here](https://github.com/AngeloDotNet/NET6CustomLibrary/blob/main/src/NET6CustomLibrary/Docs/).
-In addition to the implementations listed above, the library includes dependencies to the MassTransit, FluentValidation, AutoMapper and SequentialGuid packages.
+In addition to the implementations listed above, the library includes dependencies to the MassTransit, AutoMapper and SequentialGuid packages.
 
 
 ## :muscle: Contributing
