@@ -10,14 +10,7 @@ public class LoggerService : ILoggerService
         this.logger = logger;
     }
 
-    /// <summary>
-    /// Abstraction of the objectResult of the statusCode
-    /// </summary>
-    /// <param name="message"></param>
-    /// <param name="statusCode"></param>
-    /// <param name="typeCode"></param>
-    /// <param name="httpContext"></param>
-    /// <returns></returns>
+    [Obsolete("This method will be deprecated in future releases.", false)]
     public ErrorResponse ManageError(string message, int statusCode, int typeCode, HttpContext httpContext)
     {
         logger.LogWarning(message);
