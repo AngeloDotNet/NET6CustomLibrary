@@ -8,14 +8,7 @@ public class ErrorResponse
     public string InstancePath { get; set; }
     public List<string> Message { get; set; }
 
-    /// <summary>
-    /// Object abstraction model Result of the statusCode
-    /// </summary>
-    /// <param name="statusCode"></param>
-    /// <param name="titleCode"></param>
-    /// <param name="typeCode"></param>
-    /// <param name="instancePath"></param>
-    /// <param name="message"></param>
+    [Obsolete("This method will be deprecated in future releases.", false)]
     public ErrorResponse(int statusCode, string titleCode, int typeCode, string instancePath, List<string> message)
     {
         StatusCode = statusCode;
