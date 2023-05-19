@@ -362,4 +362,15 @@ public static class DependencyInjection
         return services;
     }
     #endregion
+
+    #region "FLUENT VALIDATION"
+    public static IServiceCollection AddFluentValidationService<TAssembly>(this IServiceCollection services) where TAssembly : class
+    {
+        services.AddScoped<IValidation, Validazione.Validation>();
+        services.AddScoped<ILoggerService, LoggerService>();
+        services.AddValidatorsFromAssemblyContaining<TAssembly>();
+
+        return services;
+    }
+    #endregion
 }
