@@ -22,10 +22,4 @@ public interface ICommand<TEntity, TKey> where TEntity : class, IEntity<TKey>, n
     /// <param name="entity"></param>
     /// <returns></returns>
     Task DeleteAsync(TEntity entity);
-
-    //Task CreateTransactionAsync(TEntity entity);
-
-    //Task UpdateTransactionAsync(TEntity entity);
-
-    //Task DeleteTransactionAsync(TEntity entity);
 }
