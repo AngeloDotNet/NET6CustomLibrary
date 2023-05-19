@@ -27,7 +27,8 @@ dotnet add package NET6CustomLibrary
 The extensions methods available regarding:
 
 - [x] Date and Time Only<br>
-- [x] DBContext generic CRUD methods<br>
+- [x] DBContext generic methods<br>
+- [ ] DBContext generic methods transaction (coming soon)<br>
 - [x] DBContext Pool MySQL / MariaDB<br>
 - [x] DBContext Pool PostgreSQL<br>
 - [x] DBContext Pool SQLite<br>
@@ -40,6 +41,7 @@ The extensions methods available regarding:
 - [x] Multi language support<br>
 - [x] Redis Cache<br>
 - [x] Serilog (save to text file)<br>
+- [ ] Serilog (save to SEQ - Documentation coming soon)<br>
 - [x] Swagger UI minimal configuration<br>
 - [x] Swagger UI with date and time only management<br>
 - [x] Swagger UI with JWT Bearer<br>
@@ -51,7 +53,7 @@ The extensions methods available regarding:
 The available method interfaces:
 
 - [ ] Fluent Validation (Documentation coming soon)<br>
-- [ ] Error Result (coming soon)<br>
+- [ ] Error Result (Documentation coming soon)<br>
 - [ ] RabbitMQ (coming soon)<br>
 - [ ] Upload Files (coming soon)
 
