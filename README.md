@@ -41,7 +41,7 @@ The extensions methods available regarding:
 - [x] Multi language support<br>
 - [x] Redis Cache<br>
 - [x] Serilog (save to text file)<br>
-- [ ] Serilog (save to SEQ - Documentation coming soon)<br>
+- [x] Serilog (save to SEQ)<br>
 - [x] Swagger UI minimal configuration<br>
 - [x] Swagger UI with date and time only management<br>
 - [x] Swagger UI with JWT Bearer<br>
