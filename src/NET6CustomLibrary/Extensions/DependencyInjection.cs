@@ -10,6 +10,15 @@ public static class DependencyInjection
         return services;
     }
 
+    public static IServiceCollection AddSerilogSeqServices(this IServiceCollection services)
+    {
+        Log.Logger = new LoggerConfiguration().MinimumLevel.Debug().CreateLogger();
+
+        services.AddTransient<ILoggerService, LoggerService>();
+
+        return services;
+    }
+
     public static WebApplication AddSerilogConfigureServices(this WebApplication application)
     {
         application.UseSerilogRequestLogging(options =>
