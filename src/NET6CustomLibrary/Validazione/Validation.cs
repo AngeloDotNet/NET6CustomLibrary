@@ -14,7 +14,7 @@ public class Validation : IValidation
         List<string> errorList = new();
 
         validationResult.Errors.ForEach(x => errorList.Add(x.ErrorMessage));
-        validationResult.Errors.ForEach(y => logger.SaveLogError(y.ErrorMessage));
+        validationResult.Errors.ForEach(y => logger.SaveLogWarning(y.ErrorMessage));
 
         return errorList;
     }
