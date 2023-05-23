@@ -53,7 +53,7 @@ The extensions methods available regarding:
 The available method interfaces:
 
 - [ ] Fluent Validation (Documentation coming soon)<br>
-- [ ] Error Result (Documentation coming soon)<br>
+- [ ] Response Result (Documentation coming soon)<br>
 - [ ] RabbitMQ (coming soon)<br>
 - [ ] Upload Files (coming soon)
 
