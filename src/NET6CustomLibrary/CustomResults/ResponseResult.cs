@@ -9,7 +9,7 @@ public class ResponseResult
     public string InstancePath { get; set; }
     public string Detail { get; set; }
 
-    internal ResponseResult(bool succeeded, int typeCode, HttpContext httpContext, object message, HttpStatusCode statusCodes)
+    public ResponseResult(bool succeeded, int typeCode, HttpContext httpContext, object message, HttpStatusCode statusCodes)
     {
         Succeeded = succeeded;
         StatusCodes = statusCodes;
