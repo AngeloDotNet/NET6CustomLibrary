@@ -1,4 +1,4 @@
-﻿namespace NET6CustomLibrary.Results;
+﻿namespace NET6CustomLibrary.CustomResults;
 
 public class ResponseResult
 {
