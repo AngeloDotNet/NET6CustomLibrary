@@ -25,29 +25,29 @@ public class LoggerService : ILoggerService
     /// Saving logs of type INFORMATION
     /// </summary>
     /// <param name="message"></param>
-    public void SaveLogInformation(string message) => logger.LogInformation(message: message);
+    public void SaveLogInformation(string message) => logger.LogInformation($"[INFORMATION] {message}");
 
     /// <summary>
     /// Saving logs of type WARNING
     /// </summary>
     /// <param name="message"></param>
-    public void SaveLogWarning(string message) => logger.LogWarning(message: message);
+    public void SaveLogWarning(string message) => logger.LogWarning($"[WARNING] {message}");
 
     /// <summary>
     /// Saving logs of type CRITICAL
     /// </summary>
     /// <param name="message"></param>
-    public void SaveLogCritical(string message) => logger.LogCritical(message: message);
+    public void SaveLogCritical(string message) => logger.LogCritical($"[CRITICAL] {message}");
 
     /// <summary>
     /// Saving logs of type ERROR
     /// </summary>
     /// <param name="message"></param>
-    public void SaveLogError(string message) => logger.LogError(message: message);
+    public void SaveLogError(string message) => logger.LogError($"[ERROR] {message}");
 
     /// <summary>
     /// Saving logs of type DEBUG
     /// </summary>
     /// <param name="message"></param>
-    public void SaveLogDebug(string message) => logger.LogDebug(message: message);
+    public void SaveLogDebug(string message) => logger.LogDebug($"[DEBUG] {message}");
 }

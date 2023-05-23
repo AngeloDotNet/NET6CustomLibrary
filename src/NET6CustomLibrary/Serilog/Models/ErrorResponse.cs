@@ -1,5 +1,6 @@
 ﻿namespace NET6CustomLibrary.Serilog.Models;
 
+[Obsolete("This method will be deprecated in future releases.", false)]
 public class ErrorResponse
 {
     public string TitleCode { get; set; }
@@ -8,7 +9,6 @@ public class ErrorResponse
     public string InstancePath { get; set; }
     public List<string> Message { get; set; }
 
-    [Obsolete("This method will be deprecated in future releases.", false)]
     public ErrorResponse(int statusCode, string titleCode, int typeCode, string instancePath, List<string> message)
     {
         StatusCode = statusCode;
