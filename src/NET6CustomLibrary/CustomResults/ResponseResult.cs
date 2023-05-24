@@ -18,7 +18,4 @@ public class ResponseResult
         Detail = $"https://httpstatuses.io/{(int)statusCodes}";
         Message = message;
     }
-
-    public static ResponseResult Result(bool succeeded, int typeCode, HttpContext httpContext, object message, HttpStatusCode statusCodes)
-        => new(succeeded, typeCode, httpContext, message, statusCodes);
 }
