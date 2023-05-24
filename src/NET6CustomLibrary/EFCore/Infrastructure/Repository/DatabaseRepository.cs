@@ -8,8 +8,16 @@ public class DatabaseRepository<TEntity, TKey> : Database<TEntity, TKey>, IDatab
 
     public async Task<int> GetCountAsync()
     {
-        return await DbContext.Set<TEntity>()
-            .CountAsync();
+        //return await DbContext.Set<TEntity>()
+        //    .CountAsync();
+
+        var result = await DbContext.Set<TEntity>()
+            .AsNoTracking()
+            .ToListAsync();
+
+        var itemCount = result.Count;
+
+        return itemCount;
     }
 
     public async Task<List<TEntity>> GetOrderByIdAscendingAsync()
@@ -26,5 +34,28 @@ public class DatabaseRepository<TEntity, TKey> : Database<TEntity, TKey>, IDatab
             .OrderByDescending(x => x.Id)
             .AsNoTracking()
             .ToListAsync();
+    }
+
+    public async Task<ListViewModel<TEntity>> GetEntitiesPaginationAsync(int pageIndex, int pageSize)
+    {
+        //return await DbContext.Set<TEntity>()
+        //    .Skip((pageIndex - 1) * pageSize)
+        //    .Take(pageSize)
+        //    .AsNoTracking()
+        //    .ToListAsync();
+
+        var result = await DbContext.Set<TEntity>()
+            .Skip((pageIndex - 1) * pageSize)
+            .Take(pageSize)
+            .AsNoTracking()
+            .ToListAsync();
+
+        //var itemCount = result.Count;
+
+        return new ListViewModel<TEntity>
+        {
+            Results = result,
+            TotalCount = result.Count
+        };
     }
 }
