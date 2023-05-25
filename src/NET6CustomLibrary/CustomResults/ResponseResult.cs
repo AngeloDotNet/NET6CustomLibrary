@@ -1,5 +1,6 @@
 ﻿namespace NET6CustomLibrary.CustomResults;
 
+[Obsolete("This method will be deprecated in future releases.", false)]
 public class ResponseResult
 {
     public bool Succeeded { get; set; }
