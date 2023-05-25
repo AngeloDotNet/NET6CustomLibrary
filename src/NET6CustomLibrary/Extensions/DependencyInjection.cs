@@ -110,6 +110,15 @@ public static class DependencyInjection
         return services;
     }
 
+    public static IServiceCollection AddDbContextTransactionMethods<TDbContext>(this IServiceCollection services) where TDbContext : DbContext
+    {
+        services.AddScoped<DbContext, TDbContext>();
+        services.AddScoped(typeof(ITUnitOfWork<,>), typeof(TUnitOfWork<,>));
+        services.AddScoped(typeof(IRepository<,>), typeof(Repository<,>));
+
+        return services;
+    }
+
     /// <summary>
     /// Extension method per aggiungere un DbContext di tipo TDbContext con il provider MySQL / MariaDB
     /// </summary>
@@ -296,7 +305,7 @@ public static class DependencyInjection
             {
                 ResponseWriter = async (context, report) =>
                 {
-                    var result = System.Text.Json.JsonSerializer.Serialize(new
+                    var result = JsonSerializer.Serialize(new
                     {
                         status = report.Status.ToString(),
                         details = report.Entries.Select(e => new
@@ -318,7 +327,7 @@ public static class DependencyInjection
             {
                 ResponseWriter = async (context, report) =>
                 {
-                    var result = System.Text.Json.JsonSerializer.Serialize(new
+                    var result = JsonSerializer.Serialize(new
                     {
                         status = report.Status.ToString(),
                         details = report.Entries.Select(e => new
