@@ -28,7 +28,7 @@ The extensions methods available regarding:
 
 - [x] Date and Time Only<br>
 - [x] DBContext generic methods<br>
-- [ ] DBContext generic methods transaction (coming soon)<br>
+- [ ] DBContext generic methods transaction (Documentation coming soon)<br>
 - [x] DBContext Pool MySQL / MariaDB<br>
 - [x] DBContext Pool PostgreSQL<br>
 - [x] DBContext Pool SQLite<br>
@@ -53,7 +53,7 @@ The extensions methods available regarding:
 The available method interfaces:
 
 - [ ] Fluent Validation (Documentation coming soon)<br>
-- [ ] Response Result (Documentation coming soon)<br>
+- [ ] Custom Response (Documentation coming soon)<br>
 - [ ] RabbitMQ (coming soon)<br>
 - [ ] Upload Files (coming soon)
 
