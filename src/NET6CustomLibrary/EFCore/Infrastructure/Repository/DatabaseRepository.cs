@@ -36,7 +36,7 @@ public class DatabaseRepository<TEntity, TKey> : Database<TEntity, TKey>, IDatab
             .ToListAsync();
     }
 
-    public async Task<ListViewModel<TEntity>> GetEntitiesPaginationAsync(int pageIndex, int pageSize)
+    public async Task<ListViewModel<TEntity>> GetListPaginationAsync(int pageIndex, int pageSize)
     {
         //return await DbContext.Set<TEntity>()
         //    .Skip((pageIndex - 1) * pageSize)
