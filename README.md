@@ -2,12 +2,12 @@
 
 <img src="https://socialify.git.ci/AngeloDotNet/NET6CustomLibrary/image?description=1&forks=1&issues=1&language=1&name=1&owner=1&pulls=1&stargazers=1&theme=Light" alt="NET6CustomLibrary" width="640" height="320" />
 
-<!-- [![NuGet](https://img.shields.io/nuget/v/NET6CustomLibrary.svg?style=for-the-badge)](https://www.nuget.org/packages/NET6CustomLibrary)
+[![NuGet](https://img.shields.io/nuget/v/NET6CustomLibrary.svg?style=for-the-badge)](https://www.nuget.org/packages/NET6CustomLibrary)
 [![NuGet](https://img.shields.io/nuget/dt/NET6CustomLibrary.svg?style=for-the-badge)](https://www.nuget.org/packages/NET6CustomLibrary)
 [![GitHub license](https://img.shields.io/github/license/AngeloDotNet/NET6CustomLibrary?style=for-the-badge)](https://github.com/AngeloDotNet/NET6CustomLibrary/blob/main/LICENSE)
 
 
-Collection of tools mostly used in my private and/or work projects thus avoiding the duplication of repetitive code. -->
+<!-- Collection of tools mostly used in my private and/or work projects thus avoiding the duplication of repetitive code. -->
 
 
 ## :star: Give a star
@@ -29,9 +29,9 @@ dotnet add package NET6CustomLibrary
 The extensions methods available regarding:
 
 - [x] Date and Time Only<br>
-- [x] DBContext generic methods and generic methods with transactions - Documentation coming soon<br>
+- [ ] DBContext generic methods and generic methods with transactions - Documentation coming soon<br>
 - [x] DBContext Pool for different databases (MySQL / MariaDB, PostgreSQL, SQLite, SQL server<br>
-- [x] Health Checks for different databases (MySQL / MariaDB, PostgreSQL, SQLite, SQL server) - coming soon<br>
+- [ ] Health Checks for different databases (MySQL / MariaDB, PostgreSQL, SQLite, SQL server) - coming soon<br>
 - [ ] Health Checks UI for different databases (MySQL / MariaDB, PostgreSQL, SQLite, SQL server) - Documentation coming soon<br>
 - [x] Json<br>
 - [x] MailKit<br>
