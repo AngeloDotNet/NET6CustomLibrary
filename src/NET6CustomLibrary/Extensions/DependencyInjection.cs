@@ -1,4 +1,6 @@
-﻿namespace NET6CustomLibrary.Extensions;
+﻿using HealthChecks.UI.Client;
+
+namespace NET6CustomLibrary.Extensions;
 
 public static class DependencyInjection
 {
@@ -345,6 +347,92 @@ public static class DependencyInjection
         }
 
         return builder;
+    }
+    #endregion
+
+    #region "HEALTH CHECKS WITH UI"
+    public static IServiceCollection AddHealthChecksSQLite<TDbContext>(this IServiceCollection services, string webAddressGroup, string webAddressTitle, string sqliteConnString) where TDbContext : DbContext
+    {
+        services.AddHealthChecks()
+            .AddDbContextCheck<TDbContext>(name: "Application DB Context", failureStatus: HealthStatus.Degraded)
+            .AddUrlGroup(new Uri(webAddressGroup), name: webAddressTitle, failureStatus: HealthStatus.Degraded)
+            .AddSqlite(sqliteConnString);
+
+        services.AddHealthChecksUI(setupSettings: setup =>
+        {
+            setup.AddHealthCheckEndpoint("Health Check", $"/healthz");
+        }).AddInMemoryStorage();
+
+        return services;
+    }
+
+    public static IServiceCollection AddHealthChecksSQLServer<TDbContext>(this IServiceCollection services, string webAddressGroup, string webAddressTitle, string sqliteConnString) where TDbContext : DbContext
+    {
+        services.AddHealthChecks()
+            .AddDbContextCheck<TDbContext>(name: "Application DB Context", failureStatus: HealthStatus.Degraded)
+            .AddUrlGroup(new Uri(webAddressGroup), name: webAddressTitle, failureStatus: HealthStatus.Degraded)
+            .AddSqlServer(sqliteConnString);
+
+        services.AddHealthChecksUI(setupSettings: setup =>
+        {
+            setup.AddHealthCheckEndpoint("Health Check", $"/healthz");
+        }).AddInMemoryStorage();
+
+        return services;
+    }
+
+    public static IServiceCollection AddHealthChecksMySQL<TDbContext>(this IServiceCollection services, string webAddressGroup, string webAddressTitle, string sqliteConnString) where TDbContext : DbContext
+    {
+        services.AddHealthChecks()
+            .AddDbContextCheck<TDbContext>(name: "Application DB Context", failureStatus: HealthStatus.Degraded)
+            .AddUrlGroup(new Uri(webAddressGroup), name: webAddressTitle, failureStatus: HealthStatus.Degraded)
+            .AddMySql(sqliteConnString);
+
+        services.AddHealthChecksUI(setupSettings: setup =>
+        {
+            setup.AddHealthCheckEndpoint("Health Check", $"/healthz");
+        }).AddInMemoryStorage();
+
+        return services;
+    }
+
+    public static IServiceCollection AddHealthChecksPostgreSQL<TDbContext>(this IServiceCollection services, string webAddressGroup, string webAddressTitle, string sqliteConnString) where TDbContext : DbContext
+    {
+        services.AddHealthChecks()
+            .AddDbContextCheck<TDbContext>(name: "Application DB Context", failureStatus: HealthStatus.Degraded)
+            .AddUrlGroup(new Uri(webAddressGroup), name: webAddressTitle, failureStatus: HealthStatus.Degraded)
+            .AddNpgSql(sqliteConnString);
+
+        services.AddHealthChecksUI(setupSettings: setup =>
+        {
+            setup.AddHealthCheckEndpoint("Health Check", $"/healthz");
+        }).AddInMemoryStorage();
+
+        return services;
+    }
+
+    public static WebApplication UseHealthChecksConfigure(this WebApplication app)
+    {
+        app.UseHealthChecks("/healthz", new HealthCheckOptions
+        {
+            Predicate = _ => true,
+            ResponseWriter = UIResponseWriter.WriteHealthCheckUIResponse,
+            ResultStatusCodes =
+            {
+                [HealthStatus.Healthy] = StatusCodes.Status200OK,
+                [HealthStatus.Degraded] = StatusCodes.Status500InternalServerError,
+                [HealthStatus.Unhealthy] = StatusCodes.Status503ServiceUnavailable,
+            },
+        }).UseHealthChecksUI(setup =>
+        {
+            setup.ApiPath = "/healthcheck";
+            setup.UIPath = "/healthcheck-ui";
+
+            //https://github.com/Amitpnk/Onion-architecture-ASP.NET-Core/blob/develop/src/OA/Customization/custom.css
+            //setup.AddCustomStylesheet("Customization/custom.css");
+        });
+
+        return app;
     }
     #endregion
 
