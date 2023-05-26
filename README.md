@@ -29,29 +29,16 @@ dotnet add package NET6CustomLibrary
 The extensions methods available regarding:
 
 - [x] Date and Time Only<br>
-- [x] DBContext generic methods<br>
-- [ ] DBContext generic methods transaction (Documentation coming soon)<br>
-- [x] DBContext Pool MySQL / MariaDB<br>
-- [x] DBContext Pool PostgreSQL<br>
-- [x] DBContext Pool SQLite<br>
-- [x] DBContext Pool SQL server<br>
-- [x] Health Checks MySQL / MariaDB<br>
-- [x] Health Checks PostgreSQL<br>
-- [ ] Health Checks SQL Server (coming soon)<br>
-- [ ] Health Checks UI SQLite (Documentation coming soon)<br>
-- [ ] Health Checks UI MySQL / MariaDB (Documentation coming soon)<br>
-- [ ] Health Checks UI PostgreSQL (Documentation coming soon)<br>
-- [ ] Health Checks UI SQL Server (Documentation coming soon)<br>
+- [x] DBContext generic methods and generic methods with transactions - Documentation coming soon<br>
+- [x] DBContext Pool for different databases (MySQL / MariaDB, PostgreSQL, SQLite, SQL server<br>
+- [x] Health Checks for different databases (MySQL / MariaDB, PostgreSQL, SQLite, SQL server) - coming soon<br>
+- [ ] Health Checks UI for different databases (MySQL / MariaDB, PostgreSQL, SQLite, SQL server) - Documentation coming soon<br>
 - [x] Json<br>
 - [x] MailKit<br>
 - [x] Multi language support<br>
 - [x] Redis Cache<br>
-- [x] Serilog (save to text file)<br>
-- [x] Serilog (save to SEQ)<br>
-- [x] Swagger UI minimal configuration<br>
-- [x] Swagger UI with date and time only management<br>
-- [x] Swagger UI with JWT Bearer<br>
-- [x] Swagger UI with date, time and JWT Bearer<br>
+- [x] Serilog (save to text file and save to SEQ)<br>
+- [x] Swagger UI (different types of configuration)<br>
 - [ ] MediatR (Documentation coming soon)<br>
 - [ ] Scrutor (Documentation coming soon)
 
