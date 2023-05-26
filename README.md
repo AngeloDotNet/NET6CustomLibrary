@@ -36,6 +36,10 @@ The extensions methods available regarding:
 - [x] Health Checks MySQL / MariaDB<br>
 - [x] Health Checks PostgreSQL<br>
 - [ ] Health Checks SQL Server (coming soon)<br>
+- [ ] Health Checks UI SQLite (Documentation coming soon)<br>
+- [ ] Health Checks UI MySQL / MariaDB (Documentation coming soon)<br>
+- [ ] Health Checks UI PostgreSQL (Documentation coming soon)<br>
+- [ ] Health Checks UI SQL Server (Documentation coming soon)<br>
 - [x] Json<br>
 - [x] MailKit<br>
 - [x] Multi language support<br>
