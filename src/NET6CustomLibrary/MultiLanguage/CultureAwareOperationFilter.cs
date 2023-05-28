@@ -14,7 +14,7 @@ public class CultureAwareOperationFilter : IOperationFilter
 
     public void Apply(OpenApiOperation operation, OperationFilterContext context)
     {
-        if (supportedLanguages.Count > 1)
+        if (supportedLanguages?.Count > 1)
         {
             operation.Parameters ??= new List<OpenApiParameter>();
             operation.Parameters.Add(new OpenApiParameter
