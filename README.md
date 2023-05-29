@@ -29,26 +29,26 @@ dotnet add package NET6CustomLibrary
 The extensions methods available regarding:
 
 - [x] Date and Time Only<br>
-- [ ] DBContext generic methods and generic methods with transactions - Documentation coming soon<br>
-- [x] DBContext Pool for different databases (MySQL / MariaDB, PostgreSQL, SQLite, SQL server<br>
-- [ ] Health Checks for different databases (MySQL / MariaDB, PostgreSQL, SQLite, SQL server) - coming soon<br>
-- [ ] Health Checks UI for different databases (MySQL / MariaDB, PostgreSQL, SQLite, SQL server) - Documentation coming soon<br>
+- [ ] DBContext generic methods and generic methods with transactions<br>
+- [x] DBContext Pool for different databases (MySQL / MariaDB, PostgreSQL, SQLite, SQL server)<br>
+- [ ] Health Checks for different databases (MySQL / MariaDB, PostgreSQL, SQLite, SQL server)<br>
+- [ ] Health Checks UI for different databases (MySQL / MariaDB, PostgreSQL, SQLite, SQL server)<br>
 - [x] Json<br>
 - [x] MailKit<br>
 - [x] Multi language support<br>
 - [x] Redis Cache<br>
 - [x] Serilog (save to text file and save to SEQ)<br>
 - [x] Swagger UI (different types of configuration)<br>
-- [ ] MediatR (Documentation coming soon)<br>
-- [ ] Scrutor (Documentation coming soon)
+- [ ] MediatR<br>
+- [ ] Scrutor
 
 
 The available method interfaces:
 
-- [ ] Fluent Validation (Documentation coming soon)<br>
-- [ ] Custom Response (Documentation coming soon)<br>
-- [ ] RabbitMQ (coming soon)<br>
-- [ ] Upload Files (coming soon)
+- [ ] Fluent Validation<br>
+- [ ] Custom Response<br>
+- [ ] RabbitMQ<br>
+- [ ] Upload Files
 
 
 The documentation is divided for each extension method, and can be consulted by clicking [here](https://github.com/AngeloDotNet/NET6CustomLibrary/blob/main/src/NET6CustomLibrary/Docs/).
