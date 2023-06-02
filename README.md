@@ -1,13 +1,15 @@
 # NET6 Custom Library
 
-<img src="https://socialify.git.ci/AngeloDotNet/NET6CustomLibrary/image?description=1&forks=1&issues=1&language=1&name=1&owner=1&pulls=1&stargazers=1&theme=Light" alt="NET6CustomLibrary" width="640" height="320" />
+Collection of tools mostly used in my private and/or work projects thus avoiding the duplication of repetitive code.
+
 
 [![NuGet](https://img.shields.io/nuget/v/NET6CustomLibrary.svg?style=for-the-badge)](https://www.nuget.org/packages/NET6CustomLibrary)
 [![NuGet](https://img.shields.io/nuget/dt/NET6CustomLibrary.svg?style=for-the-badge)](https://www.nuget.org/packages/NET6CustomLibrary)
+<img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/angelodotnet/NET6CustomLibrary?style=for-the-badge">
+<img alt="GitHub forks" src="https://img.shields.io/github/forks/angelodotnet/NET6CustomLibrary?style=for-the-badge">
+![GitHub issues](https://img.shields.io/github/issues/angelodotnet/NET6CustomLibrary?style=for-the-badge)
+<img alt="GitHub pull requests" src="https://img.shields.io/github/issues-pr/angelodotnet/NET6CustomLibrary?style=for-the-badge">
 [![GitHub license](https://img.shields.io/github/license/AngeloDotNet/NET6CustomLibrary?style=for-the-badge)](https://github.com/AngeloDotNet/NET6CustomLibrary/blob/main/LICENSE)
-
-
-<!-- Collection of tools mostly used in my private and/or work projects thus avoiding the duplication of repetitive code. -->
 
 
 ## :star: Give a star
