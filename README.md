@@ -5,11 +5,11 @@ Collection of tools mostly used in my private and/or work projects thus avoiding
 
 [![NuGet](https://img.shields.io/nuget/v/NET6CustomLibrary.svg?style=for-the-badge)](https://www.nuget.org/packages/NET6CustomLibrary)
 [![NuGet](https://img.shields.io/nuget/dt/NET6CustomLibrary.svg?style=for-the-badge)](https://www.nuget.org/packages/NET6CustomLibrary)
-<img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/angelodotnet/NET6CustomLibrary?style=for-the-badge">
-<img alt="GitHub forks" src="https://img.shields.io/github/forks/angelodotnet/NET6CustomLibrary?style=for-the-badge">
-![GitHub issues](https://img.shields.io/github/issues/angelodotnet/NET6CustomLibrary?style=for-the-badge)
-<img alt="GitHub pull requests" src="https://img.shields.io/github/issues-pr/angelodotnet/NET6CustomLibrary?style=for-the-badge">
-[![GitHub license](https://img.shields.io/github/license/AngeloDotNet/NET6CustomLibrary?style=for-the-badge)](https://github.com/AngeloDotNet/NET6CustomLibrary/blob/main/LICENSE)
+[![GitHub Repo stars](https://img.shields.io/github/stars/angelodotnet/NET6CustomLibrary?style=for-the-badge)](https://github.com/AngeloDotNet/NET6CustomLibrary)
+[![GitHub Forks](https://img.shields.io/github/forks/angelodotnet/NET6CustomLibrary?style=for-the-badge)](https://github.com/AngeloDotNet/NET6CustomLibrary)
+[![GitHub Issues](https://img.shields.io/github/issues/angelodotnet/NET6CustomLibrary?style=for-the-badge)](https://github.com/AngeloDotNet/NET6CustomLibrary)
+[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/angelodotnet/NET6CustomLibrary?style=for-the-badge)](https://github.com/AngeloDotNet/NET6CustomLibrary)
+[![GitHub License](https://img.shields.io/github/license/AngeloDotNet/NET6CustomLibrary?style=for-the-badge)](https://github.com/AngeloDotNet/NET6CustomLibrary/blob/main/LICENSE)
 
 
 ## :star: Give a star
