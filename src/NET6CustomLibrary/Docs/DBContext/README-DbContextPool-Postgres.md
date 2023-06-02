@@ -6,7 +6,7 @@
 ```json
 "ConnectionStrings": {
   "Default": "Host=[SERVER];Port=5432;Database=[DATABASE];Username=[USERNAME];Password=[PASSWORD]"
-},
+}
 ```
 
 <b>Note:</b> The default port for Postgres is 5432, but it can be changed as needed according to your needs.

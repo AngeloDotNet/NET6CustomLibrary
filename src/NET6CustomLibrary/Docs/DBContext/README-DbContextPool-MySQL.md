@@ -6,7 +6,7 @@
 ```json
 "ConnectionStrings": {
   "Default": "Server=[SERVER];Database=[DATABASE];Uid=[USERNAME];Pwd=[PASSWORD];Port=3306"
-},
+}
 ```
 
 <b>Note:</b> The default port for Mysql / MariaDB is 3306, but it can be changed as needed according to your needs.

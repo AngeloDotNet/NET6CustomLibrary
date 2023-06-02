@@ -6,7 +6,7 @@
 ```json
 "ConnectionStrings": {
   "Default": "Data Source=[SERVER];Initial Catalog=[DATABASE];User ID=[USERNAME];Password=[PASSWORD]"
-},
+}
 ```
 
 <b>Note:</b> The default port for SQL Server is 1433, but it can be changed as needed according to your needs.

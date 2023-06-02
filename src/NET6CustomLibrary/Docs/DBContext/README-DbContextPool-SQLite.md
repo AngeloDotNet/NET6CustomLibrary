@@ -6,7 +6,7 @@
 ```json
 "ConnectionStrings": {
     "Default": "Data Source=Data/MyDatabase.db"
-},
+}
 ```
 
 

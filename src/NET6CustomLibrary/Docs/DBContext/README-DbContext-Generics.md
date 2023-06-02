@@ -1,7 +1,7 @@
 # Entity Framework Core DbContext generics methods configuration
 
 
-## Example entity
+## Example entity interface
 
 In this example, the entity is a data model that implements the *IEntity* interface and has a primary key of type *int*.
 
