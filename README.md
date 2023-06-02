@@ -29,10 +29,9 @@ dotnet add package NET6CustomLibrary
 The extensions methods available regarding:
 
 - [x] Date and Time Only<br>
-- [ ] DBContext generic methods and generic methods with transactions<br>
+- [x] DBContext generic methods<br>
 - [x] DBContext Pool for different databases (MySQL / MariaDB, PostgreSQL, SQLite, SQL server)<br>
-- [ ] Health Checks for different databases (MySQL / MariaDB, PostgreSQL, SQLite, SQL server)<br>
-- [ ] Health Checks UI for different databases (MySQL / MariaDB, PostgreSQL, SQLite, SQL server)<br>
+- [x] Health Checks for different databases (MySQL / MariaDB, PostgreSQL, SQL server)<br>
 - [x] Json<br>
 - [x] MailKit<br>
 - [x] Multi language support<br>
