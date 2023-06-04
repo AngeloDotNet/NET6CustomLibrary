@@ -1,6 +1,4 @@
-﻿using HealthChecks.UI.Client;
-
-namespace NET6CustomLibrary.Extensions;
+﻿namespace NET6CustomLibrary.Extensions;
 
 public static class DependencyInjection
 {
@@ -102,6 +100,7 @@ public static class DependencyInjection
     #endregion
 
     #region "DB Context"
+    [Obsolete("This method will be deprecated in future releases.", false)]
     public static IServiceCollection AddDbContextGenericsMethods<TDbContext>(this IServiceCollection services) where TDbContext : DbContext
     {
         services.AddScoped<DbContext, TDbContext>();
@@ -121,6 +120,7 @@ public static class DependencyInjection
     //    return services;
     //}
 
+    [Obsolete("This method will be deprecated in future releases.", false)]
     public static IServiceCollection AddDbContextUseMySql<TDbContext>(this IServiceCollection services, string connectionString, int retryOnFailure) where TDbContext : DbContext
     {
         services.AddDbContextPool<TDbContext>(optionBuilder =>
@@ -142,6 +142,7 @@ public static class DependencyInjection
         return services;
     }
 
+    [Obsolete("This method will be deprecated in future releases.", false)]
     public static IServiceCollection AddDbContextUsePostgres<TDbContext>(this IServiceCollection services, string connectionString, int retryOnFailure) where TDbContext : DbContext
     {
         services.AddDbContextPool<TDbContext>(optionBuilder =>
@@ -164,6 +165,7 @@ public static class DependencyInjection
         return services;
     }
 
+    [Obsolete("This method will be deprecated in future releases.", false)]
     public static IServiceCollection AddDbContextUseSQLServer<TDbContext>(this IServiceCollection services, string connectionString, int retryOnFailure) where TDbContext : DbContext
     {
         services.AddDbContextPool<TDbContext>(optionBuilder =>
@@ -190,6 +192,7 @@ public static class DependencyInjection
         return services;
     }
 
+    [Obsolete("This method will be deprecated in future releases.", false)]
     public static IServiceCollection AddDbContextUseSQLite<TDbContext>(this IServiceCollection services, string connectionString) where TDbContext : DbContext
     {
         services.AddDbContextPool<TDbContext>(optionsBuilder =>
