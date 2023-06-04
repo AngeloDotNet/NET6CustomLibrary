@@ -12,6 +12,7 @@ global using System.Threading;
 global using System.Threading.Tasks;
 global using FluentValidation;
 global using FluentValidation.Results;
+global using HealthChecks.UI.Client;
 global using MailKit.Net.Smtp;
 global using MailKit.Security;
 global using MediatR;
