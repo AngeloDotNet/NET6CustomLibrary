@@ -25,7 +25,7 @@ The extensions methods available regarding:
 - [x] Date and Time Only<br>
 - [x] DBContext generic methods <b>DEPRECATED</b><br>
 - [x] DBContext Pool for different databases <b>DEPRECATED</b><br>
-- [x] Health Checks for different databases<br>
+- [x] Health Checks for different databases (without UI)<br>
 - [x] Json<br>
 - [x] MailKit<br>
 - [x] Multi language support<br>
