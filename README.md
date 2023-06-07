@@ -33,7 +33,8 @@ The extensions methods available regarding:
 - [x] Serilog (save to text file and save to SEQ)<br>
 - [x] Swagger UI (different types of configuration)<br>
 - [ ] MediatR<br>
-- [ ] Scrutor
+- [ ] Scrutor<br>
+- [ ] Policy Cors
 
 <b>Note:</b> The methods marked as deprecated will be removed in the next version of the library but they can be used with an updated implementation,
 using this library (CustomLibrary.EFCore) already available on [Nuget](https://www.nuget.org/packages/CustomLibrary.EFCore).
