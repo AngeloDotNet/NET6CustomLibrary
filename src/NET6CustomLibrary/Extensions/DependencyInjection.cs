@@ -455,4 +455,37 @@ public static class DependencyInjection
         return services;
     }
     #endregion
+
+    #region "POLICY CORS"
+    public static IServiceCollection AddPolicyCors(this IServiceCollection services, string policyName)
+    {
+        services.AddCors(options =>
+        {
+            options.AddPolicy($"{policyName}", policy =>
+            {
+                policy.AllowAnyOrigin()
+                .AllowAnyHeader()
+                .AllowAnyMethod();
+            });
+        });
+
+        return services;
+    }
+
+    public static IServiceCollection AddFullPolicyCors(this IServiceCollection services, string policyName)
+    {
+        services.AddCors(options =>
+        {
+            options.AddPolicy($"{policyName}", policy =>
+            {
+                policy.AllowAnyOrigin()
+                .AllowAnyHeader()
+                .AllowAnyMethod()
+                .AllowCredentials();
+            });
+        });
+
+        return services;
+    }
+    #endregion
 }
