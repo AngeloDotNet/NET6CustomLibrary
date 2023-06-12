@@ -12,7 +12,9 @@ public static class DependencyInjection
 
     public static IServiceCollection AddSerilogSeqServices(this IServiceCollection services)
     {
-        Log.Logger = new LoggerConfiguration().MinimumLevel.Debug().CreateLogger();
+        Log.Logger = new LoggerConfiguration()
+            .MinimumLevel.Debug()
+            .CreateLogger();
 
         services.AddTransient<ILoggerService, LoggerService>();
 
@@ -208,6 +210,7 @@ public static class DependencyInjection
     #endregion
 
     #region "HEALTH CHECKS"
+    [Obsolete("This method will be deprecated in future releases.", false)]
     public static IServiceCollection AddMySqlHealthChecks(this IServiceCollection services, string connectionString, string nameAsyncCheck)
     {
         services.AddHealthChecks()
@@ -229,6 +232,7 @@ public static class DependencyInjection
         return services;
     }
 
+    [Obsolete("This method will be deprecated in future releases.", false)]
     public static IServiceCollection AddPostgresHealthChecks(this IServiceCollection services, string connectionString, string nameAsyncCheck)
     {
         services.AddHealthChecks()
@@ -250,6 +254,7 @@ public static class DependencyInjection
         return services;
     }
 
+    [Obsolete("This method will be deprecated in future releases.", false)]
     public static IServiceCollection AddSqlServerHealthChecks(this IServiceCollection services, string connectionString, string nameAsyncCheck)
     {
         services.AddHealthChecks()
@@ -271,6 +276,7 @@ public static class DependencyInjection
         return services;
     }
 
+    [Obsolete("This method will be deprecated in future releases.", false)]
     public static IEndpointRouteBuilder AddDatabaseHealthChecks(this IEndpointRouteBuilder builder, string pattern, bool allowAnonymous = false)
     {
         if (!allowAnonymous)
