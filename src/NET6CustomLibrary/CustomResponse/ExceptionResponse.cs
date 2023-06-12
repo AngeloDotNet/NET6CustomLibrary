@@ -9,6 +9,14 @@ public class ExceptionResponse : Exception
     public string ErrorMessage { get; }
     public object ResponseBody { get; }
 
+    public ExceptionResponse(HttpStatusCode statusCode, string errorCode, string errorMessage)
+    {
+        StatusCode = statusCode;
+        ErrorCode = errorCode;
+        ErrorDetail = $"https://httpstatuses.io/{(int)statusCode}";
+        ErrorMessage = errorMessage;
+    }
+
     public ExceptionResponse(HttpStatusCode statusCode, int typeCode, string errorCode, string errorMessage)
     {
         StatusCode = statusCode;
@@ -16,6 +24,15 @@ public class ExceptionResponse : Exception
         ErrorCode = errorCode;
         ErrorDetail = $"https://httpstatuses.io/{(int)statusCode}";
         ErrorMessage = errorMessage;
+    }
+
+    public ExceptionResponse(HttpStatusCode statusCode, string errorCode, string errorMessage, object responseBody)
+    {
+        StatusCode = statusCode;
+        ErrorCode = errorCode;
+        ErrorDetail = $"https://httpstatuses.io/{(int)statusCode}";
+        ErrorMessage = errorMessage;
+        ResponseBody = responseBody;
     }
 
     public ExceptionResponse(HttpStatusCode statusCode, int typeCode, string errorCode, string errorMessage, object responseBody)
