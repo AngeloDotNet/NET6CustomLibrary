@@ -23,9 +23,6 @@ dotnet add package NET6CustomLibrary
 The extensions methods available regarding:
 
 - [x] Date and Time Only<br>
-- [x] DBContext generic methods <b>DEPRECATED</b><br>
-- [x] DBContext Pool for different databases <b>DEPRECATED</b><br>
-- [x] Health Checks for different databases (without UI)<br>
 - [x] Json<br>
 - [x] MailKit<br>
 - [x] Multi language support<br>
@@ -34,7 +31,12 @@ The extensions methods available regarding:
 - [x] Swagger UI (different types of configuration)<br>
 - [ ] MediatR<br>
 - [ ] Scrutor<br>
-- [ ] Policy Cors
+- [x] Policy Cors
+
+The deprecated extension methods:
+- [x] DBContext generic methods<br>
+- [x] DBContext Pool for different databases<br>
+- [x] Health Checks for different databases<br>
 
 <b>Note:</b> The methods marked as deprecated will be removed in the next version of the library but they can be used with an updated implementation,
 using this library (CustomLibrary.EFCore) already available on [Nuget](https://www.nuget.org/packages/CustomLibrary.EFCore).
@@ -42,7 +44,7 @@ using this library (CustomLibrary.EFCore) already available on [Nuget](https://w
 The available method interfaces:
 
 - [ ] Fluent Validation<br>
-- [ ] Custom Response<br>
+- [ ] Custom Response (for use in API endpoints)<br>
 - [ ] RabbitMQ<br>
 - [ ] Upload Files
 
