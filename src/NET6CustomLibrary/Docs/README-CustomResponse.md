@@ -13,6 +13,16 @@
 
 <b>Note:</b> result can be a message in string format or a response class that returns a DTO
 
+## Example of custom message for a 201 Created status
+
+```csharp
+  //with TypeCode, indicated in second position by the value zero
+  throw new ExceptionResponse(HttpStatusCode.Created, 0, "Created", $"Insert a custom object created message here");
+
+  //without TypeCode
+  throw new ExceptionResponse(HttpStatusCode.Created, "Created", $"Insert a custom object created message here");
+```
+
 ## Example of custom message for a 404 NotFound status
 
 ```csharp
