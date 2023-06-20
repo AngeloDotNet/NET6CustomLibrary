@@ -1,5 +1,7 @@
 # Custom response result configuration
 
+:alarm_clock: More status codes will be added soon
+
 
 ## Example of custom message for a 200 Ok status
 
@@ -23,6 +25,8 @@
   throw new ExceptionResponse(HttpStatusCode.Created, "Created", $"Insert a custom object created message here");
 ```
 
+:information_source: After the custom message, as the last parameter it is also possible to add a T object that will be returned in the response
+
 ## Example of custom message for a 404 NotFound status
 
 ```csharp
@@ -33,4 +37,4 @@
   throw new ExceptionResponse(HttpStatusCode.NotFound, "NotFound", "Insert a custom object not found message here");
 ```
 
-:alarm_clock: More status codes will be added soon
+:information_source: After the custom message, as the last parameter it is also possible to add a T object that will be returned in the response
