@@ -2,7 +2,6 @@
 
 :alarm_clock: More status codes will be added soon
 
-
 ## Example of custom message for a 200 Ok status
 
 ```csharp
@@ -13,7 +12,7 @@
   return Ok(new DefaultResponse(HttpStatusCode.Ok, true));
 ```
 
-<b>Note:</b> result can be a message in string format or a response class that returns a DTO
+**Note:** result can be a message in string format or a response class that returns a DTO
 
 ## Example of custom message for a 201 Created status
 
