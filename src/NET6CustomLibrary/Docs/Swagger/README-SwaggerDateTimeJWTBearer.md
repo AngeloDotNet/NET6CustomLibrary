@@ -24,7 +24,8 @@ public void ConfigureServices(IServiceCollection services)
 
 public void Configure(WebApplication app)
 {
-  app.AddUseSwaggerUI("My Web Api v1");
+  app.UseSwaggerUI("My Web Api v1");
+  //OR app.UseSwaggerUINoEmptyRoutePrefix("My Web Api v1");
 }
 ```
 
@@ -51,6 +52,7 @@ public void ConfigureServices(IServiceCollection services)
 
 public void Configure(WebApplication app)
 {
-  app.AddUseSwaggerUI("My Web Api v1");
+  app.UseSwaggerUI("My Web Api v1");
+  //OR app.UseSwaggerUINoEmptyRoutePrefix("My Web Api v1");
 }
 ```

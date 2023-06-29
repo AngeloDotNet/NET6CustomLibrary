@@ -1,6 +1,5 @@
 # SwaggerUI configuration
 
-
 ## Registering services at Startup (with xml documentation)
 
 ```csharp
@@ -24,12 +23,12 @@ public void ConfigureServices(IServiceCollection services)
 
 public void Configure(WebApplication app)
 {
-  app.AddUseSwaggerUI("My Web Api v1");
+  app.UseSwaggerUI("My Web Api v1");
+  //OR app.UseSwaggerUINoEmptyRoutePrefix("My Web Api v1");
 }
 ```
 
 <b>Note:</b> If you want to add xml documentation to web api you need to add TRUE value to GenerateDocumentationFile tag to csproj project file.
-
 
 ## Registering services at Startup (without xml documentation)
 
