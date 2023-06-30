@@ -42,16 +42,11 @@ In addition to the implementations listed above, the library includes dependenci
 | MediatR (coming soon) | coming soon |
 | Scrutor (coming soon) | coming soon |
 | Policy Cors | available |
+| DBContext generic methods | *deprecated* |
+| DBContext Pool for different databases | *deprecated* |
+| Health Checks for different databases | *deprecated* |
 
-## Deprecated extension methods
-
-| Extension methods |
-| --- |
-| DBContext generic methods |
-| DBContext Pool for different databases |
-| Health Checks for different databases |
-
-> **Note:** The methods marked as deprecated will be removed in the next version of the library but they can be used with an updated implementation, using this library (CustomLibrary.EFCore) already available on [Nuget](https://www.nuget.org/packages/CustomLibrary.EFCore)
+> **Note:** The methods marked as deprecated will be removed in the next version of the library but they can be used with an updated implementation, using this library (*CustomLibrary.EFCore*) already available on [Nuget](https://www.nuget.org/packages/CustomLibrary.EFCore)
 
 ## Available method interfaces:
 
