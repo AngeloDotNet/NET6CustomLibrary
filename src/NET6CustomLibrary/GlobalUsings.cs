@@ -43,6 +43,8 @@ global using NET6CustomLibrary.EFCore.Infrastructure.Interfaces;
 global using NET6CustomLibrary.EFCore.Infrastructure.Repository;
 global using NET6CustomLibrary.EFCoreTransaction.Core.Interfaces;
 global using NET6CustomLibrary.EFCoreTransaction.Infrastructure.Interfaces;
+global using NET6CustomLibrary.ExceptionsMiddleware;
+global using NET6CustomLibrary.ExceptionsMiddleware.Exceptions;
 global using NET6CustomLibrary.MailKit.Options;
 global using NET6CustomLibrary.MailKit.Services;
 global using NET6CustomLibrary.MultiLanguage;
