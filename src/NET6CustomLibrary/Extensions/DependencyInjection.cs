@@ -494,4 +494,8 @@ public static class DependencyInjection
         return services;
     }
     #endregion
+
+    //Rif: https://dev.to/moe23/net-6-web-api-global-exceptions-handling-1a46
+    public static IApplicationBuilder AddGlobalErrorHandler(this IApplicationBuilder applicationBuilder)
+        => applicationBuilder.UseMiddleware<GlobalErrorHandlingMiddleware>();
 }
