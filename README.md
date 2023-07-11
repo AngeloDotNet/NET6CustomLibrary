@@ -53,7 +53,6 @@ In addition to the implementations listed above, the library includes dependenci
 | Interfaces | Status |
 | --- | --- |
 | Fluent Validation  | coming soon |
-| Exceptions Middleware | available |
 | RabbitMQ  | coming soon |
 | Upload Files | coming soon |
 
