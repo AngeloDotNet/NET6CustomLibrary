@@ -1,6 +1,6 @@
 ﻿namespace NET6CustomLibrary.ExceptionsMiddleware;
 
-internal class ExceptionResult
+internal class ExcMidResult
 {
     public HttpStatusCode ErrorCode { get; set; }
     public string ErrorStatus { get; set; }

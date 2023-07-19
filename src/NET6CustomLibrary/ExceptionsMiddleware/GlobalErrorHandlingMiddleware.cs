@@ -61,7 +61,7 @@ public class GlobalErrorHandlingMiddleware
             //stackTrace = exception.StackTrace;
         }
 
-        var exceptionResult = JsonSerializer.Serialize(new ExceptionResult()
+        var exceptionResult = JsonSerializer.Serialize(new ExcMidResult()
         {
             ErrorStatus = errorStatus,
             ErrorCode = errorCode,
