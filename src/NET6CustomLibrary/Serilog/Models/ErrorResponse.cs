@@ -1,6 +1,6 @@
 ﻿namespace NET6CustomLibrary.Serilog.Models;
 
-[Obsolete("This method will be deprecated in future releases.", false)]
+[Obsolete("This method will be deprecated in future releases.", true)]
 public class ErrorResponse
 {
     public string TitleCode { get; set; }

@@ -10,7 +10,7 @@ public class LoggerService : ILoggerService
         this.logger = logger;
     }
 
-    [Obsolete("This method will be deprecated in future releases.", false)]
+    [Obsolete("This method will be deprecated in future releases.", true)]
     public ErrorResponse ManageError(string message, int statusCode, int typeCode, HttpContext httpContext)
     {
         logger.LogWarning(message);

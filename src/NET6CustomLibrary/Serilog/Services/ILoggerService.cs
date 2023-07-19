@@ -2,7 +2,7 @@
 
 public interface ILoggerService
 {
-    [Obsolete("This method will be deprecated in future releases.", false)]
+    [Obsolete("This method will be deprecated in future releases.", true)]
     ErrorResponse ManageError(string message, int statusCode, int typeCode, HttpContext httpContext);
 
     /// <summary>
