@@ -26,6 +26,8 @@ dotnet add package NET6CustomLibrary
 
 The documentation is divided for each extension method, and can be consulted by clicking [here](https://github.com/AngeloDotNet/NET6CustomLibrary/blob/main/src/NET6CustomLibrary/Docs/).
 
+> **Note:** The methods marked as deprecated will be removed in the next version of the library but they can be used with an updated implementation, using this library (*CustomLibrary.EFCore*) already available on [Nuget](https://www.nuget.org/packages/CustomLibrary.EFCore)
+
 In addition to the implementations listed above, the library includes dependencies to the MassTransit, AutoMapper packages.
 
 ## Extensions methods
@@ -45,8 +47,6 @@ In addition to the implementations listed above, the library includes dependenci
 | DBContext generic methods | *deprecated* |
 | DBContext Pool for different databases | *deprecated* |
 | Health Checks for different databases | *deprecated* |
-
-> **Note:** The methods marked as deprecated will be removed in the next version of the library but they can be used with an updated implementation, using this library (*CustomLibrary.EFCore*) already available on [Nuget](https://www.nuget.org/packages/CustomLibrary.EFCore)
 
 ## Available method interfaces:
 
