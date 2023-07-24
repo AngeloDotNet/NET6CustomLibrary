@@ -2,14 +2,6 @@
 
 Collection of tools mostly used in my private and/or work projects thus avoiding the duplication of repetitive code.
 
-[![NuGet](https://img.shields.io/nuget/v/NET6CustomLibrary.svg?style=for-the-badge)](https://www.nuget.org/packages/NET6CustomLibrary)
-[![NuGet](https://img.shields.io/nuget/dt/NET6CustomLibrary.svg?style=for-the-badge)](https://www.nuget.org/packages/NET6CustomLibrary)
-[![GitHub Repo stars](https://img.shields.io/github/stars/angelodotnet/NET6CustomLibrary?style=for-the-badge)](https://github.com/AngeloDotNet/NET6CustomLibrary)
-[![GitHub Forks](https://img.shields.io/github/forks/angelodotnet/NET6CustomLibrary?style=for-the-badge)](https://github.com/AngeloDotNet/NET6CustomLibrary)
-[![GitHub Issues](https://img.shields.io/github/issues/angelodotnet/NET6CustomLibrary?style=for-the-badge)](https://github.com/AngeloDotNet/NET6CustomLibrary)
-[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/angelodotnet/NET6CustomLibrary?style=for-the-badge)](https://github.com/AngeloDotNet/NET6CustomLibrary)
-[![GitHub License](https://img.shields.io/github/license/AngeloDotNet/NET6CustomLibrary?style=for-the-badge)](https://github.com/AngeloDotNet/NET6CustomLibrary/blob/main/LICENSE)
-
 ## :star: Give a star
 
 If you found this Implementation helpful or used it in your Projects, do give it a :star: on Github. Thanks!
@@ -24,9 +16,9 @@ dotnet add package NET6CustomLibrary
 
 ## :memo: Library documentation
 
-The documentation is divided for each extension method, and can be consulted by clicking [here](https://github.com/AngeloDotNet/NET6CustomLibrary/blob/main/src/NET6CustomLibrary/Docs/).
+> **Note:** The methods marked deprecated are permanently removed in library version 1.0.202 but can be used with an updated implementation, using this library (*CustomLibrary.EFCore*) already available on [Nuget](https://www.nuget.org/packages/CustomLibrary.EFCore)
 
-> **Note:** The methods marked as deprecated will be removed in the next version of the library but they can be used with an updated implementation, using this library (*CustomLibrary.EFCore*) already available on [Nuget](https://www.nuget.org/packages/CustomLibrary.EFCore)
+The documentation is divided for each extension method, and can be consulted by clicking [here](https://github.com/AngeloDotNet/NET6CustomLibrary/blob/main/src/NET6CustomLibrary/Docs/).
 
 In addition to the implementations listed above, the library includes dependencies to the MassTransit, AutoMapper packages.
 
@@ -47,11 +39,6 @@ In addition to the implementations listed above, the library includes dependenci
 | DBContext generic methods | *deprecated* |
 | DBContext Pool for different databases | *deprecated* |
 | Health Checks for different databases | *deprecated* |
-
-## Available method interfaces:
-
-| Interfaces | Status |
-| --- | --- |
 | Fluent Validation  | coming soon |
 | RabbitMQ  | coming soon |
 | Upload Files | coming soon |
@@ -65,3 +52,10 @@ Contributions and/or suggestions are always welcome.
 [![Build and Test](https://github.com/AngeloDotNet/NET6CustomLibrary/actions/workflows/build.yml/badge.svg)](https://github.com/AngeloDotNet/NET6CustomLibrary/actions/workflows/build.yml)
 [![Build and Pack on Github](https://github.com/AngeloDotNet/NET6CustomLibrary/actions/workflows/dotnet-github.yml/badge.svg)](https://github.com/AngeloDotNet/NET6CustomLibrary/actions/workflows/dotnet-github.yml)
 [![Build and Pack on Nuget](https://github.com/AngeloDotNet/NET6CustomLibrary/actions/workflows/dotnet-nuget.yml/badge.svg)](https://github.com/AngeloDotNet/NET6CustomLibrary/actions/workflows/dotnet-nuget.yml)
+
+[![NuGet](https://img.shields.io/nuget/v/NET6CustomLibrary.svg)](https://www.nuget.org/packages/NET6CustomLibrary)
+[![GitHub Repo stars](https://img.shields.io/github/stars/angelodotnet/NET6CustomLibrary)](https://github.com/AngeloDotNet/NET6CustomLibrary)
+[![GitHub Forks](https://img.shields.io/github/forks/angelodotnet/NET6CustomLibrary)](https://github.com/AngeloDotNet/NET6CustomLibrary)
+[![GitHub Issues](https://img.shields.io/github/issues/angelodotnet/NET6CustomLibrary)](https://github.com/AngeloDotNet/NET6CustomLibrary)
+[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/angelodotnet/NET6CustomLibrary)](https://github.com/AngeloDotNet/NET6CustomLibrary)
+[![GitHub License](https://img.shields.io/github/license/AngeloDotNet/NET6CustomLibrary)](https://github.com/AngeloDotNet/NET6CustomLibrary/blob/main/LICENSE)
