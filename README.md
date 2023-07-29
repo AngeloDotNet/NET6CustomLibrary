@@ -2,10 +2,6 @@
 
 Collection of tools mostly used in my private and/or work projects thus avoiding the duplication of repetitive code.
 
-## :star: Give a star
-
-If you found this Implementation helpful or used it in your Projects, do give it a :star: on Github. Thanks!
-
 ## :dvd: Installation
 
 The library is available on [NuGet](https://www.nuget.org/packages/NET6CustomLibrary) or run the following command in the .NET CLI:
@@ -16,7 +12,7 @@ dotnet add package NET6CustomLibrary
 
 ## :memo: Library documentation
 
-> **Note:** The methods marked deprecated are permanently removed in library version 1.0.202 but can be used with an updated implementation, using this library (*CustomLibrary.EFCore*) already available on [Nuget](https://www.nuget.org/packages/CustomLibrary.EFCore)
+> **Note:** The methods marked deprecated are permanently removed in library version 1.0.201 but can be used with an updated implementation, using this library (*CustomLibrary.EFCore*) already available on [Nuget](https://www.nuget.org/packages/CustomLibrary.EFCore)
 
 The documentation is divided for each extension method, and can be consulted by clicking [here](https://github.com/AngeloDotNet/NET6CustomLibrary/blob/main/src/NET6CustomLibrary/Docs/).
 
@@ -27,25 +23,29 @@ In addition to the implementations listed above, the library includes dependenci
 | Extensions methods | Status |
 | --- | --- |
 | Date and Time Only | available |
-| Json | available |
-| MailKit | available |
-| Multi language support | available |
-| Redis Cache | available |
-| Serilog (save to text file and save to SEQ) | available |
-| Swagger UI (different types of configuration) | available |
-| MediatR (coming soon) | coming soon |
-| Scrutor (coming soon) | coming soon |
-| Policy Cors | available |
 | DBContext generic methods | *deprecated* |
 | DBContext Pool for different databases | *deprecated* |
+| Fluent Validation | coming soon |
 | Health Checks for different databases | *deprecated* |
-| Fluent Validation  | coming soon |
-| RabbitMQ  | coming soon |
+| Json | available |
+| MailKit | available |
+| MediatR | available |
+| Multi language support | available |
+| Policy Cors | available |
+| RabbitMQ | coming soon |
+| Redis Cache | available |
+| Scrutor | coming soon |
+| Serilog (save to text file and save to SEQ) | available |
+| Swagger UI (different types of configuration) | available |
 | Upload Files | coming soon |
 
 ## :muscle: Contributing
 
 Contributions and/or suggestions are always welcome.
+
+## :star: Give a star
+
+If you found this Implementation helpful or used it in your Projects, do give it a :star: on Github. Thanks!
 
 ## :beginner: Badges
 
