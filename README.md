@@ -25,19 +25,19 @@ In addition to the implementations listed above, the library includes dependenci
 | Date and Time Only | available |
 | DBContext generic methods | *deprecated* |
 | DBContext Pool for different databases | *deprecated* |
-| Fluent Validation | coming soon |
+| Fluent Validation | not implemented |
 | Health Checks for different databases | *deprecated* |
 | Json | available |
 | MailKit | available |
 | MediatR | available |
 | Multi language support | available |
 | Policy Cors | available |
-| RabbitMQ | coming soon |
+| RabbitMQ | not implemented |
 | Redis Cache | available |
-| Scrutor | coming soon |
+| Scrutor | not implemented |
 | Serilog (save to text file and save to SEQ) | available |
 | Swagger UI (different types of configuration) | available |
-| Upload Files | coming soon |
+| Upload Files | not implemented |
 
 ## :muscle: Contributing
 
